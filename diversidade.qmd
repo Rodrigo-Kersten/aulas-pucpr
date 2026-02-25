@@ -1,0 +1,73 @@
+---
+title: "Diversidade"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+## Cálculo de índices de Diversidade
+
+Índices de diversidade são métricas amplamente aplicados em ecologia. São utilizadas usadas para quantificar a riquesa e a abundância relativa em uma comunidade. Eles combinam dois componentes principais: riqueza de espécies (número total de espécies ou categorias) e equitabilidade (ou uniformidade, que mede o quão igualitariamente os indivíduos estão distribuídos entre as espécies).
+Índices ajudam a comparar comunidades e avaliar a saúde de ecossistemas, mas devem ser interpretados com cuidado, pois diferentes índice podem das também diferentes resultados. 
+
+
+![](megsdiverse.png){fig-align="center" width="300"}
+
+***Carregar os dados*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(readxl)
+library(writexl)
+setwd("C:/Inventario") 
+dados <- read_excel("Restinga.xlsx")
+
+```
+
+***Carregar pacotes necessários para esta análise*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(vegan)
+```
+
+***Cácular a Diversidade***
+
+```{r eval=FALSE}
+matriz_freq <- xtabs(~Parcela+Especie, dados)
+
+
+n_ind_parc <- rowSums(matriz_freq)
+n_ind_tot <- sum(n_ind_parc)
+n_sp_parc <- specnumber(matriz_freq)
+n_sp_tot <- specnumber(colSums(matriz_freq))
+margalef <- (n_sp_tot-1)/n_ind_tot
+simpson <- diversity(colSums(matriz_freq), index = 'simpson')
+shannon <- diversity(colSums(matriz_freq), index = 'shannon')
+pielou <- shannon/log(n_sp_tot)
+
+indices <- data.frame(Indice = 'Valor',
+			Margalef = round(margalef,2),
+			Simpson = round(simpson,2),
+			Shannon = round(shannon,2),
+			Pielou = round(pielou,2))
+
+```
+
+
+***Observar os resultados***
+
+```{r eval=FALSE}
+indices
+```
+
+***Salvar em Excel***
+```{r eval=FALSE}
+write_xlsx(indices, "Diversidade.xlsx")
+```
+

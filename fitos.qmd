@@ -1,0 +1,136 @@
+---
+title: "Fitossociologia"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+## Análie Fitossociológica
+
+Fitossociologia é o ramo da Ecologia Vegetal que estuda, de forma qualitativa e quantitativa, a composição, estrutura, dinâmica, distribuição e relações ambientais das comunidades vegetais, especialmente florestais. Ela se destaca por aplicar métodos numéricos para analisar espécies vegetais em unidades amostrais, como parcelas ou pontos quadrantes, permitindo o cálculo de parâmetros como densidade, dominância, frequência e valor de importância.
+
+![](parc.jpg){fig-align="center" width="300"}
+
+------------------------------------------------------------------------
+
+***Antes de Carregar os dados***
+
+Verificar no Excel de as colunas estão nomeadas exatamente como a baixo:
+
+-   Especie (sem acento)
+
+-   Parcela
+
+-   Alt (= altura)
+
+-   DAP (Diâmetro)
+
+------------------------------------------------------------------------
+
+***Carregar os dados*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(readxl)
+library(writexl)
+setwd("C:/Inventario") 
+dados <- read_excel("Restinga.xlsx")
+
+```
+
+***Indicar o tamanho da unidade amostral (ua)***
+
+```{r eval=FALSE}
+area_ua <- 100            - em métros quadrados
+```
+
+***Calcular os parâmetros Fitossociológicos***
+
+```{r eval=FALSE}
+n_ua <- length(unique(dados$Parcela))
+A <- area_ua*n_ua
+dados$g <- pi*dados$DAP^2/40000
+N <- table(dados$Especie)
+DA <- N*10000/A
+DR <- DA/sum(DA)*100
+FA <- sapply(unique(dados$Especie),
+function(x){
+length(unique(subset(dados,dados$Especie==x)$Parcela))/n_ua
+})*100
+FA <- FA[order(names(FA))]
+FR <- FA/sum(FA)*100
+DOA <- aggregate(dados$g, list(dados$Especie), sum)$x*10000/A
+DOR <- DOA/sum(DOA)*100
+
+tabela_fito <- data.frame(Especie=names(N),
+N=as.vector(N),
+DA=round(as.vector(DA),1),
+DR=round(as.vector(DR),1),
+FA=round(as.vector(FA),1),
+FR=round(as.vector(FR),1),
+DoA=round(DOA,1),
+DoR=round(DOR,1),
+IVI=round(as.vector(DR+FR+DOR),1))
+tabela_fito <- tabela_fito[order(tabela_fito$IVI,decreasing = T),]
+
+```
+
+***Observar os resultados***
+
+```{r eval=FALSE}
+- tabela da Fitossociologia
+tabela_fito
+
+- Área total amostrada
+A
+
+```
+
+***Salvar em formato Excel***
+
+```{r eval=FALSE}
+write_xlsx(tabela_fito, "Fitossociologia.xlsx") 
+```
+
+obs: podem utilizar o nome de sua preferência para a tabela do excel
+
+
+------------------------------------------------------------------------
+
+***CALCULAR DADOS PARA AS FAMÍLIAS***
+
+```{r eval=FALSE}
+n_ua <- length(unique(dados$Parcela))
+A <- area_ua*n_ua
+dados$g <- pi*dados$DAP^2/40000
+N <- table(dados$Familia)
+DA <- N*10000/A
+DR <- DA/sum(DA)*100
+FA <- sapply(unique(dados$Familia),
+function(x){
+length(unique(subset(dados,dados$Familia==x)$Parcela))/n_ua
+})*100
+FA <- FA[order(names(FA))]
+FR <- FA/sum(FA)*100
+DOA <- aggregate(dados$g, list(dados$Familia), sum)$x*10000/A
+DOR <- DOA/sum(DOA)*100
+tabela_fam <- data.frame(Especie=names(N),
+N=as.vector(N),
+DA=round(as.vector(DA),1),
+DR=round(as.vector(DR),1),
+FA=round(as.vector(FA),1),
+FR=round(as.vector(FR),1),
+DoA=round(DOA,1),
+DoR=round(DOR,1),
+IVI=round(as.vector(DR+FR+DOR),1))
+tabela_fam <- tabela_fam[order(tabela_fito$IVI,decreasing = T),]
+write_xlsx(tabela_fam, "resultado_fam.xlsx") 
+```
+
+Neste caso, já até salvamos os resultados na planilha "***resultado_fam.xlsx***"

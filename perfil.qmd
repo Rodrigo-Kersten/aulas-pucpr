@@ -1,0 +1,139 @@
+---
+title: "Perfil da Vegetação"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+## Perfil da Vegetação
+
+Perfil de vegetação é uma imagem que mostra a estrutura vertical e horizontal de uma formação vegetal. Baseada no levantamento fitossociológico ela destaca os diferentes estratos de uma floresta e suas principais espécies. É utilizado para auxiliar na descrição de uma comunidade vegetal.
+
+![](perfil.gif){fig-align="center" width="500"}
+
+------------------------------------------------------------------------
+
+***Antes de Carregar os dados***
+
+Verificar no Excel de as colunas estão nomeadas exatamente como a baixo:
+
+-   Especie (sem acento)
+
+-   Alt (= altura)
+
+-   DAP (Diâmetro)
+
+-   Posicao (Estrato)
+
+Verificar se as classes de Posicao estão assim:
+
+-   Emergente
+
+-   Dossel
+
+-   Intermediario
+
+-   Sub-bosque
+
+------------------------------------------------------------------------
+
+***Carregar os dados*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(readxl)
+library(writexl)
+setwd("C:/Inventario") 
+dados <- read_excel("Restinga.xlsx")
+
+```
+
+***Perfil Esquemático da Vegetação***
+
+```{r eval=FALSE}
+perfil_esquematico <- function(narv){
+
+library(dplyr)
+
+
+
+
+dados_perfil <- dados %>% group_by(`Posicao`,Especie) %>% summarise(mean(Alt)) %>%
+rename('estrato'=1, 'especie'=2,'h.med'=3) %>%
+ungroup() %>%
+mutate(dap= group_by(dados, `Posicao`, Especie) %>% summarise(dap=mean(DAP)) %>% pull(dap)) %>%
+mutate(ab= group_by(dados, `Posicao`, Especie) %>% summarise(ab=n()) %>% pull(ab))
+superior <- dados_perfil %>% filter(estrato == 'Dossel')
+intermediario <- dados_perfil %>% filter(estrato == 'Intermediario')
+emergente <- dados_perfil %>% filter(estrato == 'Emergente')
+subbosque <- dados_perfil %>% filter(estrato == 'Sub-bosque')
+narv_estrato <- round(table(dados$`Posicao`)/sum(table(dados$`Posicao`))*narv,0)
+if(sum(narv_estrato)!=narv){
+narv_estrato[which(narv_estrato==max(narv_estrato))] <- narv_estrato[which(narv_estrato==max(narv_estrato))]+1
+}
+
+superior$prob <- superior$ab/sum(superior$ab)
+intermediario$prob <- intermediario$ab/sum(intermediario$ab)
+emergente$prob <- emergente$ab/sum(emergente$ab)
+subbosque$prob <- subbosque$ab/sum(subbosque$ab)
+
+
+sample_sup <- tryCatch({
+sample(1:nrow(superior), narv_estrato[1], replace = TRUE, superior$prob)},
+error = function (e) {0}
+)
+sample_int <- tryCatch({
+sample(1:nrow(intermediario), narv_estrato[2], replace = TRUE, intermediario$prob)},
+error = function (e) {0}
+)
+sample_eme <- tryCatch({
+sample(1:nrow(emergente), narv_estrato[3], replace = TRUE, emergente$prob)},
+error = function (e) {0}
+)
+sample_sub <- tryCatch({
+sample(1:nrow(subbosque), narv_estrato[4], replace = TRUE, subbosque$prob)},
+error = function (e) {0}
+)
+
+sample_sup <- superior[sample_sup,]
+sample_int <- intermediario[sample_int,]
+sample_eme <- emergente[sample_eme,]
+sample_sub <- subbosque[sample_sub,]
+
+sample <- bind_rows(sample_sup,sample_int,sample_eme,sample_sub) %>%
+mutate(dap01=(dap-min(dap))/(max(dap)-min(dap))*(.6-.1)+.1,
+id = sample(1:narv,narv))
+id_sp <- unique(sample$especie)
+sample$id_sp <- match(sample$especie,id_sp)
+
+library(ggplot2)
+library(ggforce)
+library(ggrepel)
+
+perfil <- ggplot(sample)+
+geom_bar(aes(x=id,y=h.med, width=dap01),stat = 'identity', color = 'black', fill = 'burlywood4')+
+geom_ellipse(aes(x0=id, y0=h.med,
+a=1+3*dap01*h.med/(1/narv*500), #função genérica de diâmetro de copa
+b=1,angle=0), fill = 'darkgreen')+
+geom_label_repel(aes(x=id,y=h.med+.5,label=especie), direction = 'y', fontface = 'bold', size = 2, alpha=.8, segment.alpha = 0)+
+scale_x_continuous(breaks = 1:narv, expand = c(.01,0))+
+scale_y_continuous(expand=c(0,0), limits = c(0,max(sample$h.med)+5))+
+xlab('')+
+ylab('Altura (m)')+
+theme_bw()+
+theme(panel.grid = element_blank(),
+axis.text.x = element_blank(),
+axis.ticks.x = element_blank())
+return(perfil)
+}
+
+quantidade_de_arvores <- 30
+perfil_esquematico(quantidade_de_arvores)
+
+```

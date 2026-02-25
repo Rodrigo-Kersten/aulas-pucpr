@@ -28,7 +28,7 @@ dados <- read_excel("Restinga.xlsx")
 
 ```
 
-***Carregar pacotes necessários para esta análise***
+***Carregar pacotes necessários para esta análise*** (se ainda não estão carregados)
 
 ```{r eval=FALSE}
 library(vegan)
@@ -58,6 +58,11 @@ plot(curva_acum,
 
 ------------------------------------------------------------------------
 
-Se quiserem mudar a cor do gráfico é só trocar "lightskyblue1" Vejam os códigos de cores no [ColorChart.pdf](C:\OneDrive - Grupo Marista\Documents\Aulas\R.Kersten_Aulas\ColorChart.pdf)
+***Para mudar a cor*** Para mudar a cor do gráfico é só trocar "lightskyblue1". \
+Basta rodar a análise novamente
 
-Para circundar a curva troquem o 0 por 1 em "ci.lty = 0" e rodem a análise novamente
+Vejam os códigos de cores no [ColorChart.pdf](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\ColorChart.pdf)
+
+As cores básicas em inglês ([**green**]{style="color: GREEN;"}, [**blue**]{style="color: BLUE;"}, [**red**]{style="color: RED;"}, [**orange**]{style="color: ORANGE;"},[**yellow**]{style="color: YELLOW;"}, [**magenta**]{style="color: MAGENTA;"}) funcionam, mas tem uma infinidade de opções
+
+Para circundar a curva com uma linha, troquem o 0 por 1 (ou mais, se preferirem) em "ci.lty = 0".

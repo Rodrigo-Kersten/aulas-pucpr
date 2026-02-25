@@ -42,7 +42,16 @@ website:
         contents:
           - text: "Dendrograma"
             href: dendro.qmd
-            
+          - text: "Acumulação"
+            href: acumula.qmd 
+          - text: "Índices de Diversidade"
+            href: diversidade.qmd
+          - text: "Fitossociologia"
+            href: fitos.qmd 
+          - text: "Perfi da Vegetação"
+            href: perfil.qmd
+          - text: "Gráficos IVI"
+            href: ivi.qmd 
       - "---"
       - text: "🔙 Voltar"
         href: invent.qmd

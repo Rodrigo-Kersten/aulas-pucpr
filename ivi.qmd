@@ -1,0 +1,84 @@
+---
+title: "Gráficos Valor de Importância"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+##Gráficos do Valor de Importância
+
+O Gráfico do valor de importancia ilustra tanto o valor de importância das principais espécies amostradas como os componteste do IVI (Frequencia, Densidade e Dominancia) permitindo que interpretações ecológicas sejam retiradas da análise. Esta figura ajuda a compreender porque determinada espécie é mais importante e como o a comunidade de estrutura. ![](ivi.png){fig-align="center" width="300"}
+
+***ATENÇÃO***
+
+Para esta análise, e necessário que os cálculos fitossociológicos já tenham sido realizado (objeto *tabela_fito* já cálculado) [***nessa sessão de uso do R***]{.underline}. Se estão abrindo o programa agora precisam antes realizar estes cálculos.
+
+***Carregar pacotes necessários para esta análise***
+
+```{r eval=FALSE}
+library(dplyr)
+library(tidyr)
+library(forcats)
+library(ggplot2)
+```
+
+***Indicar o número de espécies a serem mostradas no gráfico***
+
+```{r eval=FALSE}
+n_sp_plot <- 15
+```
+
+***Criar o gráfico***
+
+```{r eval=FALSE}
+
+tabela_fito_long <- tabela_fito %>%
+  mutate(Especie = fct_reorder(Especie, IVI)) %>% 
+  select(Especie, DR, FR, DoR) %>% 
+  filter(Especie != 'NI') %>% 
+  filter(row_number() <= n_sp_plot) %>%
+  pivot_longer(2:4, names_to = 'par', values_to = 'val')
+
+```
+
+**Plotar o gráfico**\*
+
+```{r eval=FALSE}
+
+tabela_fito_long %>% 
+  group_by(Especie) %>% 
+  mutate(par = fct_reorder(par, c('DR', 'FR', 'DoR')),
+         IVI = if_else(par=='DoR', sum(val), NA_real_)) %>% 
+  arrange(desc(par)) %>% 
+  mutate(lab_y = cumsum(val)) %>% 
+  ggplot(aes(x = Especie, fill = par))+
+  geom_bar(aes(y = val), stat = 'identity')+
+  geom_text(aes(y = lab_y, label = paste0(round(val), '%')), hjust = 1, nudge_y = -.2)+
+  geom_text(aes(y = IVI, label = paste0(round(IVI), '%')), fontface = 'bold', hjust = 0, nudge_y = .2)+
+  coord_flip()+
+  scale_y_continuous(expand=c(0,0), limits = function(x){c(0,max(x)*1.1)})+
+  scale_fill_brewer(name = 'Parâmetro', palette = 'Set2')+
+  labs(title = 'Valor de Importância de espécies na área de estudo',
+       subtitle = paste0(n_sp_plot, ' espécies mais importantes'))+
+  theme_minimal()+
+  theme(axis.title = element_blank(),
+        axis.line.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.y = element_text(face = 'italic'),
+        plot.title.position = 'plot')
+
+```
+
+------------------------------------------------------------------------
+
+Para trocar as cores do gráfico substituam o 'Set2' (palette = 'Set2') pela paleta escolhida Vejam em [PalleteChart.pdf](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\PalleteChart.pdf)
+
+Neste caso, não estamos trocando cores individuais, mas grupos de tonalidades (paletas).

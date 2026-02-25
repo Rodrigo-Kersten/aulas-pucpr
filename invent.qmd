@@ -17,6 +17,12 @@ Na disciplina os estudantes aprendem a planejar e executar inventários e avalia
 
 ### Inventário Florestal
 
+Para saber mais sobre invetários, acessem a seguinte página:
+
+<https://matanativa.com.br/inventario-florestal-para-supressao-de-vegetacao/>
+
+### Inventário - Relatório Final da Disciplina
+
 Em equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)
 
 Vocês irão realizar um inventário florestal e escrever relatório para "PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO" BASEADOS na [Instrução Normativa do IAT (IN no. 48/2025)](https://geopr.iat.pr.gov.br/img/catalogo-de-legislacoes/)
@@ -40,11 +46,6 @@ O relatório deve incluir
 Cada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor
 
 As análises dos dados serão realizados em Excel e no R
-
-
-
-
-
 
 <div>
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Instalando o R – Rodrigo Kersten</title>
+<title>Perfil da Vegetação – Rodrigo Kersten</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5bf33484f8c6110779751dcd0ddece21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fa9ed21e17cd494e347a1555e8dafba1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -132,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./insta.html">Utilizando o R</a></li><li class="breadcrumb-item"><a href="./insta.html">Instalando o R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfi da Vegetação</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -176,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./insta.html" class="sidebar-item-text sidebar-link active">
+  <a href="./insta.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instalando o R</span></a>
   </div>
 </li>
@@ -223,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfil.html" class="sidebar-item-text sidebar-link">
+  <a href="./perfil.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Perfi da Vegetação</span></a>
   </div>
 </li>
@@ -251,9 +286,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./insta.html">Utilizando o R</a></li><li class="breadcrumb-item"><a href="./insta.html">Instalando o R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfi da Vegetação</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Instalando o R</h1>
+<h1 class="title">Perfil da Vegetação</h1>
 </div>
 
 
@@ -270,17 +305,122 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong><em>Instalar o R</em></strong></p>
-<p><a href="https://cran-r.c3sl.ufpr.br/" class="uri">https://cran-r.c3sl.ufpr.br/</a></p>
-<p><img src="R1.png" class="img-fluid" width="800"></p>
-<p><img src="r2.png" class="img-fluid" width="700"></p>
-<p><strong>ANTES DE MAIS NADA</strong></p>
-<p>1) Criem uma pasta chamada “Inventario” direto na raiz do drive “C:” –&gt; (<strong>SEM ACENTO</strong>)</p>
-<p>2) Copiem o arquivo do excel (dos dados) para esta pasta</p>
-<p>3)&nbsp;Simplifiquem o nome do arquivo do excel (Ex: de “FOM_Ctba 10x10 Cid. Industrial.xlsx” para “Ctba.xlsx” ou “Inventario.xlsx”)</p>
-<p>4) Vejam qual o tamanho das parcelas utilizadas no seu levantamento</p>
+<section id="perfil-da-vegetação" class="level2">
+<h2 class="anchored" data-anchor-id="perfil-da-vegetação">Perfil da Vegetação</h2>
+<p>Perfil de vegetação é uma imagem que mostra a estrutura vertical e horizontal de uma formação vegetal. Baseada no levantamento fitossociológico ela destaca os diferentes estratos de uma floresta e suas principais espécies. É utilizado para auxiliar na descrição de uma comunidade vegetal.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="perfil.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+<hr>
+<p><strong><em>Antes de Carregar os dados</em></strong></p>
+<p>Verificar no Excel de as colunas estão nomeadas exatamente como a baixo:</p>
+<ul>
+<li><p>Especie (sem acento)</p></li>
+<li><p>Alt (= altura)</p></li>
+<li><p>DAP (Diâmetro)</p></li>
+<li><p>Posicao (Estrato)</p></li>
+</ul>
+<p>Verificar se as classes de Posicao estão assim:</p>
+<ul>
+<li><p>Emergente</p></li>
+<li><p>Dossel</p></li>
+<li><p>Intermediario</p></li>
+<li><p>Sub-bosque</p></li>
+</ul>
+<hr>
+<p><strong><em>Carregar os dados</em></strong> (se ainda não estão carregados)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Inventario"</span>) </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Restinga.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong><em>Perfil Esquemático da Vegetação</em></strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>perfil_esquematico <span class="ot">&lt;-</span> <span class="cf">function</span>(narv){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>dados_perfil <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(<span class="st">`</span><span class="at">Posicao</span><span class="st">`</span>,Especie) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="fu">mean</span>(Alt)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="st">'estrato'</span><span class="ot">=</span><span class="dv">1</span>, <span class="st">'especie'</span><span class="ot">=</span><span class="dv">2</span>,<span class="st">'h.med'</span><span class="ot">=</span><span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">dap=</span> <span class="fu">group_by</span>(dados, <span class="st">`</span><span class="at">Posicao</span><span class="st">`</span>, Especie) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">dap=</span><span class="fu">mean</span>(DAP)) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(dap)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">ab=</span> <span class="fu">group_by</span>(dados, <span class="st">`</span><span class="at">Posicao</span><span class="st">`</span>, Especie) <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(<span class="at">ab=</span><span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(ab))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>superior <span class="ot">&lt;-</span> dados_perfil <span class="sc">%&gt;%</span> <span class="fu">filter</span>(estrato <span class="sc">==</span> <span class="st">'Dossel'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>intermediario <span class="ot">&lt;-</span> dados_perfil <span class="sc">%&gt;%</span> <span class="fu">filter</span>(estrato <span class="sc">==</span> <span class="st">'Intermediario'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>emergente <span class="ot">&lt;-</span> dados_perfil <span class="sc">%&gt;%</span> <span class="fu">filter</span>(estrato <span class="sc">==</span> <span class="st">'Emergente'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>subbosque <span class="ot">&lt;-</span> dados_perfil <span class="sc">%&gt;%</span> <span class="fu">filter</span>(estrato <span class="sc">==</span> <span class="st">'Sub-bosque'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>narv_estrato <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">table</span>(dados<span class="sc">$</span><span class="st">`</span><span class="at">Posicao</span><span class="st">`</span>)<span class="sc">/</span><span class="fu">sum</span>(<span class="fu">table</span>(dados<span class="sc">$</span><span class="st">`</span><span class="at">Posicao</span><span class="st">`</span>))<span class="sc">*</span>narv,<span class="dv">0</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">sum</span>(narv_estrato)<span class="sc">!=</span>narv){</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>narv_estrato[<span class="fu">which</span>(narv_estrato<span class="sc">==</span><span class="fu">max</span>(narv_estrato))] <span class="ot">&lt;-</span> narv_estrato[<span class="fu">which</span>(narv_estrato<span class="sc">==</span><span class="fu">max</span>(narv_estrato))]<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>superior<span class="sc">$</span>prob <span class="ot">&lt;-</span> superior<span class="sc">$</span>ab<span class="sc">/</span><span class="fu">sum</span>(superior<span class="sc">$</span>ab)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>intermediario<span class="sc">$</span>prob <span class="ot">&lt;-</span> intermediario<span class="sc">$</span>ab<span class="sc">/</span><span class="fu">sum</span>(intermediario<span class="sc">$</span>ab)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>emergente<span class="sc">$</span>prob <span class="ot">&lt;-</span> emergente<span class="sc">$</span>ab<span class="sc">/</span><span class="fu">sum</span>(emergente<span class="sc">$</span>ab)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>subbosque<span class="sc">$</span>prob <span class="ot">&lt;-</span> subbosque<span class="sc">$</span>ab<span class="sc">/</span><span class="fu">sum</span>(subbosque<span class="sc">$</span>ab)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>sample_sup <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(superior), narv_estrato[<span class="dv">1</span>], <span class="at">replace =</span> <span class="cn">TRUE</span>, superior<span class="sc">$</span>prob)},</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="at">error =</span> <span class="cf">function</span> (e) {<span class="dv">0</span>}</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>sample_int <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(intermediario), narv_estrato[<span class="dv">2</span>], <span class="at">replace =</span> <span class="cn">TRUE</span>, intermediario<span class="sc">$</span>prob)},</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="at">error =</span> <span class="cf">function</span> (e) {<span class="dv">0</span>}</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>sample_eme <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(emergente), narv_estrato[<span class="dv">3</span>], <span class="at">replace =</span> <span class="cn">TRUE</span>, emergente<span class="sc">$</span>prob)},</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="at">error =</span> <span class="cf">function</span> (e) {<span class="dv">0</span>}</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>sample_sub <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(subbosque), narv_estrato[<span class="dv">4</span>], <span class="at">replace =</span> <span class="cn">TRUE</span>, subbosque<span class="sc">$</span>prob)},</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="at">error =</span> <span class="cf">function</span> (e) {<span class="dv">0</span>}</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>sample_sup <span class="ot">&lt;-</span> superior[sample_sup,]</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>sample_int <span class="ot">&lt;-</span> intermediario[sample_int,]</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>sample_eme <span class="ot">&lt;-</span> emergente[sample_eme,]</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>sample_sub <span class="ot">&lt;-</span> subbosque[sample_sub,]</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>sample <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(sample_sup,sample_int,sample_eme,sample_sub) <span class="sc">%&gt;%</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">dap01=</span>(dap<span class="sc">-</span><span class="fu">min</span>(dap))<span class="sc">/</span>(<span class="fu">max</span>(dap)<span class="sc">-</span><span class="fu">min</span>(dap))<span class="sc">*</span>(.<span class="dv">6</span><span class="fl">-.1</span>)<span class="sc">+</span>.<span class="dv">1</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="at">id =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>narv,narv))</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>id_sp <span class="ot">&lt;-</span> <span class="fu">unique</span>(sample<span class="sc">$</span>especie)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>sample<span class="sc">$</span>id_sp <span class="ot">&lt;-</span> <span class="fu">match</span>(sample<span class="sc">$</span>especie,id_sp)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggforce)</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>perfil <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sample)<span class="sc">+</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span>id,<span class="at">y=</span>h.med, <span class="at">width=</span>dap01),<span class="at">stat =</span> <span class="st">'identity'</span>, <span class="at">color =</span> <span class="st">'black'</span>, <span class="at">fill =</span> <span class="st">'burlywood4'</span>)<span class="sc">+</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_ellipse</span>(<span class="fu">aes</span>(<span class="at">x0=</span>id, <span class="at">y0=</span>h.med,</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="at">a=</span><span class="dv">1</span><span class="sc">+</span><span class="dv">3</span><span class="sc">*</span>dap01<span class="sc">*</span>h.med<span class="sc">/</span>(<span class="dv">1</span><span class="sc">/</span>narv<span class="sc">*</span><span class="dv">500</span>), <span class="co">#função genérica de diâmetro de copa</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="at">b=</span><span class="dv">1</span>,<span class="at">angle=</span><span class="dv">0</span>), <span class="at">fill =</span> <span class="st">'darkgreen'</span>)<span class="sc">+</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_label_repel</span>(<span class="fu">aes</span>(<span class="at">x=</span>id,<span class="at">y=</span>h.med<span class="fl">+.5</span>,<span class="at">label=</span>especie), <span class="at">direction =</span> <span class="st">'y'</span>, <span class="at">fontface =</span> <span class="st">'bold'</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha=</span>.<span class="dv">8</span>, <span class="at">segment.alpha =</span> <span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span>narv, <span class="at">expand =</span> <span class="fu">c</span>(.<span class="dv">01</span>,<span class="dv">0</span>))<span class="sc">+</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="at">expand=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fu">max</span>(sample<span class="sc">$</span>h.med)<span class="sc">+</span><span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="fu">xlab</span>(<span class="st">''</span>)<span class="sc">+</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="fu">ylab</span>(<span class="st">'Altura (m)'</span>)<span class="sc">+</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_bw</span>()<span class="sc">+</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(perfil)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>quantidade_de_arvores <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">perfil_esquematico</span>(quantidade_de_arvores)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

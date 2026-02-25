@@ -159,7 +159,7 @@ assim como "dados" são os dados originais "fito" é o objeto (resultado) calcul
 ### 8 -\> Limpar a memória do ambiente
 
 ```{r eval=FALSE}
-R rm(list=ls())
+rm(list=ls())
 ```
 
 ## Pacotes que serão utilizados na disciplina

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Instalando o R – Rodrigo Kersten</title>
+<title>Gráficos Valor de Importância – Rodrigo Kersten</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5bf33484f8c6110779751dcd0ddece21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fa9ed21e17cd494e347a1555e8dafba1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -132,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./insta.html">Utilizando o R</a></li><li class="breadcrumb-item"><a href="./insta.html">Instalando o R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./ivi.html">Gráficos IVI</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -176,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./insta.html" class="sidebar-item-text sidebar-link active">
+  <a href="./insta.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instalando o R</span></a>
   </div>
 </li>
@@ -229,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ivi.html" class="sidebar-item-text sidebar-link">
+  <a href="./ivi.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gráficos IVI</span></a>
   </div>
 </li>
@@ -251,9 +286,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./insta.html">Utilizando o R</a></li><li class="breadcrumb-item"><a href="./insta.html">Instalando o R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./ivi.html">Gráficos IVI</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Instalando o R</h1>
+<h1 class="title">Gráficos Valor de Importância</h1>
 </div>
 
 
@@ -270,15 +305,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong><em>Instalar o R</em></strong></p>
-<p><a href="https://cran-r.c3sl.ufpr.br/" class="uri">https://cran-r.c3sl.ufpr.br/</a></p>
-<p><img src="R1.png" class="img-fluid" width="800"></p>
-<p><img src="r2.png" class="img-fluid" width="700"></p>
-<p><strong>ANTES DE MAIS NADA</strong></p>
-<p>1) Criem uma pasta chamada “Inventario” direto na raiz do drive “C:” –&gt; (<strong>SEM ACENTO</strong>)</p>
-<p>2) Copiem o arquivo do excel (dos dados) para esta pasta</p>
-<p>3)&nbsp;Simplifiquem o nome do arquivo do excel (Ex: de “FOM_Ctba 10x10 Cid. Industrial.xlsx” para “Ctba.xlsx” ou “Inventario.xlsx”)</p>
-<p>4) Vejam qual o tamanho das parcelas utilizadas no seu levantamento</p>
+<p>##Gráficos do Valor de Importância</p>
+<p>O Gráfico do valor de importancia ilustra tanto o valor de importância das principais espécies amostradas como os componteste do IVI (Frequencia, Densidade e Dominancia) permitindo que interpretações ecológicas sejam retiradas da análise. Esta figura ajuda a compreender porque determinada espécie é mais importante e como o a comunidade de estrutura. <img src="ivi.png" class="img-fluid quarto-figure quarto-figure-center" width="400"></p>
+<p><strong><em>ATENÇÃO</em></strong></p>
+<p>Para esta análise, e necessário que os cálculos fitossociológicos já tenham sido realizado (objeto <em>tabela_fito</em> já cálculado) <u><strong><em>nessa sessão de uso do R</em></strong></u>. Se estão abrindo o programa agora precisam antes realizar estes cálculos.</p>
+<p><strong><em>Carregar pacotes necessários para esta análise</em></strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong><em>Indicar o número de espécies a serem mostradas no gráfico</em></strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n_sp_plot <span class="ot">&lt;-</span> <span class="dv">15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong><em>Criar o gráfico</em></strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tabela_fito_long <span class="ot">&lt;-</span> tabela_fito <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Especie =</span> <span class="fu">fct_reorder</span>(Especie, IVI)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Especie, DR, FR, DoR) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Especie <span class="sc">!=</span> <span class="st">'NI'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">row_number</span>() <span class="sc">&lt;=</span> n_sp_plot) <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">names_to =</span> <span class="st">'par'</span>, <span class="at">values_to =</span> <span class="st">'val'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Plotar o gráfico</strong>*</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tabela_fito_long <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Especie) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">par =</span> <span class="fu">fct_reorder</span>(par, <span class="fu">c</span>(<span class="st">'DR'</span>, <span class="st">'FR'</span>, <span class="st">'DoR'</span>)),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">IVI =</span> <span class="fu">if_else</span>(par<span class="sc">==</span><span class="st">'DoR'</span>, <span class="fu">sum</span>(val), <span class="cn">NA_real_</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(par)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lab_y =</span> <span class="fu">cumsum</span>(val)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Especie, <span class="at">fill =</span> par))<span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> val), <span class="at">stat =</span> <span class="st">'identity'</span>)<span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">y =</span> lab_y, <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(val), <span class="st">'%'</span>)), <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">nudge_y =</span> <span class="sc">-</span>.<span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">y =</span> IVI, <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(IVI), <span class="st">'%'</span>)), <span class="at">fontface =</span> <span class="st">'bold'</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">nudge_y =</span> .<span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()<span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>), <span class="at">limits =</span> <span class="cf">function</span>(x){<span class="fu">c</span>(<span class="dv">0</span>,<span class="fu">max</span>(x)<span class="sc">*</span><span class="fl">1.1</span>)})<span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">name =</span> <span class="st">'Parâmetro'</span>, <span class="at">palette =</span> <span class="st">'Set2'</span>)<span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Valor de Importância de espécies na área de estudo'</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="fu">paste0</span>(n_sp_plot, <span class="st">' espécies mais importantes'</span>))<span class="sc">+</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.line.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">'italic'</span>),</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title.position =</span> <span class="st">'plot'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+<p>Para trocar as cores do gráfico substituam o ‘Set2’ (palette = ‘Set2’) pela paleta escolhida Vejam em <a href="C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\PalleteChart.pdf">PalleteChart.pdf</a></p>
+<p>Neste caso, não estamos trocando cores individuais, mas grupos de tonalidades (paletas).</p>
 
 
 
