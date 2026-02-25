@@ -1,0 +1,15 @@
+{
+  "hash": "eb9abef2cd26ab39fdfce252db0381b2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Dendrograma\"\nformat:\n  html:\n    theme: \n      light: cosmo          \n    code-copy: true        \n    code-overflow: scroll   \n    code-block-bg: \"#f6f8fa\"  \n    code-block-border-left: \"#24292f\"  \n    highlight-style: github\neditor: visual\n---\n\n## Dendrograma de Similaridade Entre as Parcelas\n\nUm dendrograma de similaridade é uma representação gráfica em forma de árvore (semelhante a um cladrograma, mas não representa evolução). É amplamente utilizada para visualizar a relação entre objetos. Ele organiza os dados indicando quais amostras são mais parecidas entre si e formando \"grupos\" ou \"ramos\".\n\n![](dendog.png){fig-align=\"center\" width=\"300\"}\n\n***Carregar os dados*** (se ainda não estão carregados)\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(readxl)\nlibrary(writexl)\nsetwd(\"C:/Inventario\") \ndados <- read_excel(\"Restinga.xlsx\")\n```\n:::\n\n\n***Carregar pacotes necessários para esta análise***\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(vegan) \nlibrary(dplyr)\n```\n:::\n\n\n***Calcular a distância entre as parcelas e montar o dendrograma***\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmatriz_freq <- xtabs(~ Parcela + Especie, dados)\njaccard_dist <- as.dist(betadiver(matriz_freq, \"j\"))\ndendrograma <- hclust(jaccard_dist, method = \"complete\")\npar(mar = c(5, 4, 4, 2))  \nplot(dendrograma, \n     hang = -1,\n     main = \"Dendrograma - Jaccard\",\n     ylab = \"Altura do Cluster (Dissimilaridade)\",\n     xlab = \"Parcelas\",\n     cex = 0.7)\n```\n:::\n\n\nps: cex = 0.7 = tamanho da fonte\n\n\\*\\*\\*MARCAR OS GRUPOS FORMADOS\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrect.hclust(dendrograma, k = 4, border = \"red\")\n```\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

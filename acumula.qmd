@@ -1,0 +1,63 @@
+---
+title: "Curva de Rarefação de Espécies"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+## Curva de Rarefação de Espécies
+
+A curva de rarefação é uma ferramenta estatística usada em ecologia para comparar a riqueza de espécies entre diferentes comunidades quando o esforço amostral (número de indivíduos coletados ou amostras realizadas) não é o mesmo. A análise calcula quantas espécies ocorrem (em média) em números crescentes de parcelas e constroi uma curva.
+
+![](rarefacao.png){fig-align="center" width="300"}
+
+***Carregar os dados*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(readxl)
+library(writexl)
+setwd("C:/Inventario") 
+dados <- read_excel("Restinga.xlsx")
+
+```
+
+***Carregar pacotes necessários para esta análise***
+
+```{r eval=FALSE}
+library(vegan)
+library(knitr)
+library(kableExtra) 
+library(dplyr)
+```
+
+***Cácular a Curva***
+
+```{r eval=FALSE}
+matriz_freq <- xtabs(~Parcela+Especie, dados)
+
+par(mfrow=c(1,1),mar=c(4,4,2,2))
+curva_acum <- specaccum(matriz_freq)
+plot(curva_acum, 
+     ci.type="polygon",
+     ci.col="lightskyblue1",
+     ci.lty = 0,
+     lwd=2,
+     lty=2,
+     xlab="Unidades amostrais",
+     ylab="Riqueza",
+     main="Curva de acumulação de espécies")
+
+```
+
+------------------------------------------------------------------------
+
+Se quiserem mudar a cor do gráfico é só trocar "lightskyblue1" Vejam os códigos de cores no [ColorChart.pdf](C:\OneDrive - Grupo Marista\Documents\Aulas\R.Kersten_Aulas\ColorChart.pdf)
+
+Para circundar a curva troquem o 0 por 1 em "ci.lty = 0" e rodem a análise novamente

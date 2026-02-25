@@ -1,0 +1,15 @@
+{
+  "hash": "484ae907c8792c66edb5786a528ee378",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"M2026\"\nformat:\n  html:\n    sidebar: false\neditor: visual\n---\n\n## Turma do Ano de 2026\n\n## Arquivos das Aulas Teóricas\n\n\n::: {.cell}\n\n:::\n\n\nYou can add options to executable code like this\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 4\n```\n\n\n:::\n:::\n\n\nThe `echo: false` option disables the printing of code (only output is displayed).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

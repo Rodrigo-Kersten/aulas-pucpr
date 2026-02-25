@@ -1,0 +1,26 @@
+---
+title: "M2026"
+format:
+  html:
+    sidebar: false
+editor: visual
+---
+
+## Turma do Ano de 2026
+
+## Arquivos das Aulas Teóricas
+
+```{r}
+
+
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

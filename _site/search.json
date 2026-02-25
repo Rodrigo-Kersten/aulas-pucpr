@@ -1,0 +1,232 @@
+[
+  {
+    "objectID": "restaura.html",
+    "href": "restaura.html",
+    "title": "Restauração",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see"
+  },
+  {
+    "objectID": "restaura.html#ecologia-da-restauração",
+    "href": "restaura.html#ecologia-da-restauração",
+    "title": "Restauração",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see"
+  },
+  {
+    "objectID": "M2026.html#arquivos-das-aulas-teóricas",
+    "href": "M2026.html#arquivos-das-aulas-teóricas",
+    "title": "M2026",
+    "section": "Arquivos das Aulas Teóricas",
+    "text": "Arquivos das Aulas Teóricas\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "NOÇÕES BÁSICAS DO AMBIENTE R",
+    "section": "",
+    "text": "O “R” é um ambiente de trabalho, não um software ou um APP pronto para uso.\nA diferença é que temos que “ensiná-lo” e “prepará-lo” para fazer o que desejamos.\nÉ uma chatice e demanda um monte de aprendizado, é difícil, mas…\nA vantagem é que ele não é limitado, pode fazer qualquer coisa que a gente “mandar”; desde cálculos simples, estatística complexa, mapas ou mesmo este site.\nSe vocês já instalaram o R podemos começar.",
+    "crumbs": [
+      "Inventário",
+      "Utilizando o R",
+      "Introdução ao R"
+    ]
+  },
+  {
+    "objectID": "intro.html#ensinando-o-r-a-funcionar",
+    "href": "intro.html#ensinando-o-r-a-funcionar",
+    "title": "NOÇÕES BÁSICAS DO AMBIENTE R",
+    "section": "ENSINANDO O R A FUNCIONAR",
+    "text": "ENSINANDO O R A FUNCIONAR\nInstalar pacotes\n\ninstall.packages(\"readxl\")\n\neste comando faz download das “instruções” para o R aprender a ler arquivos excel. Isso só precisa ser feito uma vez!\nÉ mais ou menos como instalar um APP no celular",
+    "crumbs": [
+      "Inventário",
+      "Utilizando o R",
+      "Introdução ao R"
+    ]
+  },
+  {
+    "objectID": "intro.html#preparando-para-análise",
+    "href": "intro.html#preparando-para-análise",
+    "title": "NOÇÕES BÁSICAS DO AMBIENTE R",
+    "section": "PREPARANDO PARA ANÁLISE",
+    "text": "PREPARANDO PARA ANÁLISE\n\nCarregar Pacotes já instalados\n\nlibrary(readxl)\n\ncom este comando o R carrega as instruções para ler arquivos excel. Isso precisa ser refeito toda vez que o R é aberto.\nÉ mais ou menos como abrir um APP instalado no celular\nDefinir a pasta (diretório) de trabalho\n\nsetwd(\"C:/Inventario\")\n\neste comando avisa o R em que pasta você vai trabalhar. Isso também precisa ser refeito toda vez que o R é aberto.\nCarregar dados\nEstes comandos carregam teus dados para dentro do ambiente R e já pode trabalhar com eles. Antes sempre verifique o tipo de arquivo.\n\ndados \\&lt;- read.table(\"Barigui.txt\", header=T)\n\ndados \\&lt;- read.csv(\"Monica.csv\", header= TRUE)\n\ndados \\&lt;- read_excel(\"Restinga.xlsx\")\n\ndados \\&lt;- read_excel(\"Palmito.xlsx\", sheet = \"Seca\")\n\nutilize cada linha para o arquivo correspondente:\n- texto simples (.txt)\n- texto separado por vírgulas (.csv)\n- arquivo do excel (.xlsx) com apenas uma pasta de trabalho\n- arquivo do excel com várias pastas de trabalho (.xlsx, sheet = “nome”)\nEm todos os casos “dados” passa a ser o nome do conjunto dos teus dados.\nSempre que formos utilizá-los vamos nos referir a ele assim. O R, chama isso de um “objeto”. o conjunto “dados” é um objeto dentro do ambiente\nVocês podem escolher qualquer nome, basta depois trocar também quando forem rodar as análises que faremos\n\n\nVERIFICANDO/OBSERVANDO OS DADOS\nObservar os dados\n\ndados (ou o outro nome que deram ao dados)  - exibe toda sua tabela de dados\n\nhead(dados)                                 - exibe as primeiras linhas\n\nstr(dados)                                  - exibe os dados por página\n\ntail(dados)                                 - exibe as últimas linhas\n\nstr(dados\\$PAP)                             - exibe apenas a culuna \"PAP\"\n\n\n\nmean(dados\\$PAP)                            - Cálcula a média do \"PAP\"\n\nsum(dados\\$PAP)                             - Soma do \"PAP\"\n\n\nclass(dados\\$PAP)                           - indica que tipo de dado tem na culuna\n\nOs principais tipos de dados são \"numéricos\" ou \"caracteres\", dados numericos podem ser utilizados em cálculos, dados do tipo caracter é tratado como texto e não entram diretametem em operações matemáticas.\n\nCaso seja necessário corrigir o tipo de dados:\n  \ndados\\$Ind \\&lt;- as.character(dados\\$Ind)     - muda o tipo para caractere\ndados\\$Ind \\&lt;- as.numeric(dados\\$Ind)       - muda o tipo para numérico\n\n\n\nRenomear\nO conjunto todo de dados\n\nbarigui \\&lt;- dados\n\nsendo nome.novo &lt;- nome.antigo\nseu conjunto de dados agora se chama barigui\nApenas uma coluna (variável)\n\nnames(dados)\\[names(dados) == \"Alt\"\\] \\&lt;- \"altura\"\n\nsendo\n\nAlt = nome antigo\naltura = nome novo\n\n\n\n\nExportando o resultado final para o Excel\nSalvar com arquivo do excel\n\nwrite_xlsx(fito, \"result.xlsx\")\n\nassim como “dados” são os dados originais “fito” é o objeto (resultado) calculado pelo programa result.xlsx é o nome do arquivo final em excel, vocês podem trocar por qualquer nome, basta manter .xlsx ao final\n\n\n\n8 -&gt; Limpar a memória do ambiente\n\nR rm(list=ls())",
+    "crumbs": [
+      "Inventário",
+      "Utilizando o R",
+      "Introdução ao R"
+    ]
+  },
+  {
+    "objectID": "intro.html#pacotes-que-serão-utilizados-na-disciplina",
+    "href": "intro.html#pacotes-que-serão-utilizados-na-disciplina",
+    "title": "NOÇÕES BÁSICAS DO AMBIENTE R",
+    "section": "Pacotes que serão utilizados na disciplina",
+    "text": "Pacotes que serão utilizados na disciplina\n\ninstall.packages(\"readxl\")\ninstall.packages(\"writexl\") \ninstall.packages(\"tidyverse\")\ninstall.packages(\"vegan\")\ninstall.packages(\"forestmangr\")\ninstall.packages(\"vegan\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"knitr\")\ninstall.packages(\"kableExtra\") \ninstall.packages(\"ggforce\")\ninstall.packages(\"ggrepel\")\n\ncopiem e colem todos eles no R\n\nPara aprender um pouco mais sobre o R\nSe você deseja aprender um pouco mais sobre o R acesse o seguinte curso https://bookdown.org/eugeniadoria/CursoMQ/",
+    "crumbs": [
+      "Inventário",
+      "Utilizando o R",
+      "Introdução ao R"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rodrigo de Andrade Kersten",
+    "section": "",
+    "text": "Biólogo, Professor de Botânica e áreas correlatas\n Pontifícia Universidade Católica do Paraná\n\n\nUniversidade Federal do Paraná, Curitiba | Paraná, BR\nDr. Conservação da Natureza (Engenharia Florestal)\n\n\n\nProfessor | Botânica | 2002 - presente\nCurador do Herbário HUCP | 2018 - Presente \nConsulturia Ambiental | EIA-RIMA, Restauração, RAS, Inventário, Pareceres Técnicos | 1998 - presente\nCoordenador | Comissão de Ecologia Vegetal da Sociedade Brasileira de Botânica | 2018 - 2022\n\n\n\n\nMorfologia Vegetal\nBiodiversidade de Algas e Fungos\nBiodiversidade de Briófitas e Pteridófitas\nBiodiversidade de Fanerógamas\nInventário e avaliação da biodiversidade - Flora\nEcologia da Restauração\n\n\n\n\nVocês também podem acessar as atividades e o conteúdo direto pelo Ambiente Virtual de Aprendizagem"
+  },
+  {
+    "objectID": "index.html#formação",
+    "href": "index.html#formação",
+    "title": "Rodrigo de Andrade Kersten",
+    "section": "",
+    "text": "Universidade Federal do Paraná, Curitiba | Paraná, BR\nDr. Conservação da Natureza (Engenharia Florestal)"
+  },
+  {
+    "objectID": "index.html#experiência",
+    "href": "index.html#experiência",
+    "title": "Rodrigo de Andrade Kersten",
+    "section": "",
+    "text": "Professor | Botânica | 2002 - presente\nCurador do Herbário HUCP | 2018 - Presente \nConsulturia Ambiental | EIA-RIMA, Restauração, RAS, Inventário, Pareceres Técnicos | 1998 - presente\nCoordenador | Comissão de Ecologia Vegetal da Sociedade Brasileira de Botânica | 2018 - 2022"
+  },
+  {
+    "objectID": "index.html#disciplinas-ministradas-no-curso-de-biologia",
+    "href": "index.html#disciplinas-ministradas-no-curso-de-biologia",
+    "title": "Rodrigo de Andrade Kersten",
+    "section": "",
+    "text": "Morfologia Vegetal\nBiodiversidade de Algas e Fungos\nBiodiversidade de Briófitas e Pteridófitas\nBiodiversidade de Fanerógamas\nInventário e avaliação da biodiversidade - Flora\nEcologia da Restauração"
+  },
+  {
+    "objectID": "index.html#atividade-e-arquivos-das-aulas",
+    "href": "index.html#atividade-e-arquivos-das-aulas",
+    "title": "Rodrigo de Andrade Kersten",
+    "section": "",
+    "text": "Vocês também podem acessar as atividades e o conteúdo direto pelo Ambiente Virtual de Aprendizagem"
+  },
+  {
+    "objectID": "excel.html",
+    "href": "excel.html",
+    "title": "Análises em excel",
+    "section": "",
+    "text": "Digitem os dados coletados em campo em uma planilha do Excel com a seguinte Estrutura:\nColuna A: Parcela\nColuna B: Especie =&gt; (Sem acento)\nColuna C: PAP =&gt; (em cm)\nColuna D: Alt =&gt; (altura, em metros)\nColuna E: Posicao =&gt; sem acento nem sinal cedilha\n\nPlanilha para os cálculos de Volume e Suficiência\nVolume\nPlanilha para gráfico da distribuição de DAP, PAP e Altura\nDAP",
+    "crumbs": [
+      "Inventário",
+      "Excel",
+      "Análises em Excel"
+    ]
+  },
+  {
+    "objectID": "brio.html",
+    "href": "brio.html",
+    "title": "Criptógamas",
+    "section": "",
+    "text": "Ministrada dentro de “Aspectos populacionais da Biodiversidade”. É uma disciplina teórico-prática do 3º período do Curso de Ciências Biológicas. Nela os estudantes integram conhecimentos referentes à estrutura de comunidades e ecossistemas, analisando os ramos evolutivos vegetal (com ênfase em briófitas e pteridófitas) e animal (com ênfase em cordados invertebrados e vertebrados anamniotas). Ao final, são capazes de reconhecer os táxons envolvidos, suas relações evolutivas, interações ambientais e importância econômico-social.\n\n\n1 - Nota Científica Sobre Ecologia de Briófias\nTrabalho em equipes de até 4 alunos.\nO trabalho sobre ecologia de briófitas consiste em uma nota científica (pequeno artigo com 3 a 4 páginas, em duas colunas) baseado nos resultados encontrados. A nota deve apresentar a seguinte estrutura: (ver modelos)\nIntrodução (200 a 300 palavras).\nA introdução situa o problema, nela devem ser abordados temas relacionados aos estudados, como\nbriófitas, epífitas avasculares floresta de araucária, áreas alteradas, estágios sucessionais etc. A última frase da introdução deve apresentar os objetivos: (ex: “Este estudo busca identificar as briófitas encontradas em uma área de Floresta Ombrófila Mista da Fazenda Experimental Gralha Azul e analisar sua diversidade e distribuição, correlacionando esses aspectos às condições ambientais e possíveis interações ecológicas.”)\nMateriais e métodos (200 a 300 palavras): Área de estudo: Localização e características ambientais. Procedimentos de coleta: Critérios de seleção das amostras, método de coleta e registro de dados. Preparação e identificação das espécies: Técnicas de análise e identificação das briófitas. Critérios de análise dos dados: Métricas utilizadas para avaliar a diversidade e composição da comunidade (Índice de diversidade de Shannon)\nResultados e Discussão (300-500 palavras): Apresentar os dados obtidos, incluindo a lista de táxons identificados e a análise da diversidade e distribuição das espécies (tipos de casca). Os principais aspectos a serem abordados incluem:  Diversidade e estrutura da comunidade no geral:  Números totais de:  Indivíduos  Espécies  Famílias  Musgos e hepáticas  Média geral de briófitas e de espécies por árvore  Descrição das possíveis interações de musgos e hepáticas com outras espécies, incluindo:  Competição com outras epífitas ou organismos do solo.  Facilitação para o estabelecimento de plântulas de outras espécies vegetais.  Interações com microfauna, como invertebrados que utilizam as briófitas como habitat.  Papel na retenção de umidade e influência na microclimática local. \nComparação entre microambientes (ex.: casca lisa ou aspera):  Números totais em cada situação:  Indivíduos  Espécies  Famílias  Musgos e hepáticas  Média de indivíduos e espécies por árvore em cada situação  Índice de diversidade e interpretação dos resultados  Variações nas interações ecológicas entre os microambientes, avaliando se fatores como disponibilidade de luz, umidade e competição afetam a distribuição e abundância das briófitas.  Redes de interação e estabilidade da comunidade:  Como fatores ambientais influenciam a distribuição das espécies.  Possíveis interações entre briófitas e outros organismos.  Efeitos de perturbações naturais e antrópicas na estabilidade da comunidade.  Interpretação dos padrões observados com base na literatura científica. \nReferências Bibliográficas Além do texto escrito, devem ser entregue as plantas coletadas e identificadas conforme orientação passada em aulas práticas\nEntregas:\nNota científica impressa Plantas coletadas e identificadas, coladas nas tabelas de musgos e hepáticas\nPara este trabalho iremos coletar as briófitas na FEGA (será em um sábado pela manhã, data a combinar). Ao menos um integrante da equipe deve comparecer a esta atividade. Caso contrário não será possível sua execução.\nApós a coleta as plantas serão identificadas em laboratório e os dados serão tabulados e analisados.\nAs plantas serão entregues junto com o trabalho escrito em formato a ser explicado em sala de aula\nO texto deve seguir o modelo fornecido pelo professor\n\n\n\n\n\n___________________________________________________________________________________________________\n2 - Inventário florístico de Pteridófitas\nInventários são atividades típicas dos Biólogos, extremamente importantes para a conservação da natureza\nLeiam um pouco em:\nhttps://idealambiental.com.br/inventario-florestal-e-inventario-floristico/\nTrabalho em DUPLAS (15 plantas - 6 famílias) ou TRIOS (21 plantas - 8 famílias)\nATENÇÃO: NÃO COLETAR NA PUC, SE TODO MUNDO FIZER ISSO TODO ANO ACABAM-SE AS PTERI DO CAMPUS.\nMUITA PRESSÃO DE COLETA\nPara o RA de Pteridófitas vocês vão coletar plantas em locais por vocês escolhidos (podem ser localidades diversas)\nAs plantas deverão estar:\nsecas e acondicionadas de acordo com os procedimentos de herborização usuais para os grupos (Fidalgo & Bononi 1989), Montadas em folhas sufite A4 em uma coleção científica Organizadas por ordem alfabética crescente de táxon. Determinadas até gênero\nExemplo de coleta\n\n\n\n\n\nFicha de coleta corretamente preenchida\n\n\n\n\n\nPlantas úmidas serão descartadas não valendo como coletas\nTodas as exsicatas devem estar com as fichas de tombo devidamente preenchidas, inclusive com o número de coleta. Todas as coletas devem estar secas, férteis, com parte do caule e identificadas até gênero, qualquer erro invalida a coleta. A coleção deve incluir: Em dupla: 15 espécies de pelo menos 6 famílias diferentes Em trios: 21 espécies de pelo menos 8 famílias diferentes  A entrega deve ainda incluir: Uma TABELA com as os gêneros e famílias coletados (ver o modelo)\nModelo de Tabela: As colunas “Fértil”, “Caule” e “Seco” servem para conferência pelo professor. A desorganização também desconta ponto\n\nChave on-line:\nhttp://www.plantsystematics.org/cgi-bin/dol/dol_diagkey.pl?matrix=fernfamily4.winc&new=1"
+  },
+  {
+    "objectID": "brio.html#briófitas-e-pteridófitas",
+    "href": "brio.html#briófitas-e-pteridófitas",
+    "title": "Criptógamas",
+    "section": "",
+    "text": "Ministrada dentro de “Aspectos populacionais da Biodiversidade”. É uma disciplina teórico-prática do 3º período do Curso de Ciências Biológicas. Nela os estudantes integram conhecimentos referentes à estrutura de comunidades e ecossistemas, analisando os ramos evolutivos vegetal (com ênfase em briófitas e pteridófitas) e animal (com ênfase em cordados invertebrados e vertebrados anamniotas). Ao final, são capazes de reconhecer os táxons envolvidos, suas relações evolutivas, interações ambientais e importância econômico-social.\n\n\n1 - Nota Científica Sobre Ecologia de Briófias\nTrabalho em equipes de até 4 alunos.\nO trabalho sobre ecologia de briófitas consiste em uma nota científica (pequeno artigo com 3 a 4 páginas, em duas colunas) baseado nos resultados encontrados. A nota deve apresentar a seguinte estrutura: (ver modelos)\nIntrodução (200 a 300 palavras).\nA introdução situa o problema, nela devem ser abordados temas relacionados aos estudados, como\nbriófitas, epífitas avasculares floresta de araucária, áreas alteradas, estágios sucessionais etc. A última frase da introdução deve apresentar os objetivos: (ex: “Este estudo busca identificar as briófitas encontradas em uma área de Floresta Ombrófila Mista da Fazenda Experimental Gralha Azul e analisar sua diversidade e distribuição, correlacionando esses aspectos às condições ambientais e possíveis interações ecológicas.”)\nMateriais e métodos (200 a 300 palavras): Área de estudo: Localização e características ambientais. Procedimentos de coleta: Critérios de seleção das amostras, método de coleta e registro de dados. Preparação e identificação das espécies: Técnicas de análise e identificação das briófitas. Critérios de análise dos dados: Métricas utilizadas para avaliar a diversidade e composição da comunidade (Índice de diversidade de Shannon)\nResultados e Discussão (300-500 palavras): Apresentar os dados obtidos, incluindo a lista de táxons identificados e a análise da diversidade e distribuição das espécies (tipos de casca). Os principais aspectos a serem abordados incluem:  Diversidade e estrutura da comunidade no geral:  Números totais de:  Indivíduos  Espécies  Famílias  Musgos e hepáticas  Média geral de briófitas e de espécies por árvore  Descrição das possíveis interações de musgos e hepáticas com outras espécies, incluindo:  Competição com outras epífitas ou organismos do solo.  Facilitação para o estabelecimento de plântulas de outras espécies vegetais.  Interações com microfauna, como invertebrados que utilizam as briófitas como habitat.  Papel na retenção de umidade e influência na microclimática local. \nComparação entre microambientes (ex.: casca lisa ou aspera):  Números totais em cada situação:  Indivíduos  Espécies  Famílias  Musgos e hepáticas  Média de indivíduos e espécies por árvore em cada situação  Índice de diversidade e interpretação dos resultados  Variações nas interações ecológicas entre os microambientes, avaliando se fatores como disponibilidade de luz, umidade e competição afetam a distribuição e abundância das briófitas.  Redes de interação e estabilidade da comunidade:  Como fatores ambientais influenciam a distribuição das espécies.  Possíveis interações entre briófitas e outros organismos.  Efeitos de perturbações naturais e antrópicas na estabilidade da comunidade.  Interpretação dos padrões observados com base na literatura científica. \nReferências Bibliográficas Além do texto escrito, devem ser entregue as plantas coletadas e identificadas conforme orientação passada em aulas práticas\nEntregas:\nNota científica impressa Plantas coletadas e identificadas, coladas nas tabelas de musgos e hepáticas\nPara este trabalho iremos coletar as briófitas na FEGA (será em um sábado pela manhã, data a combinar). Ao menos um integrante da equipe deve comparecer a esta atividade. Caso contrário não será possível sua execução.\nApós a coleta as plantas serão identificadas em laboratório e os dados serão tabulados e analisados.\nAs plantas serão entregues junto com o trabalho escrito em formato a ser explicado em sala de aula\nO texto deve seguir o modelo fornecido pelo professor\n\n\n\n\n\n___________________________________________________________________________________________________\n2 - Inventário florístico de Pteridófitas\nInventários são atividades típicas dos Biólogos, extremamente importantes para a conservação da natureza\nLeiam um pouco em:\nhttps://idealambiental.com.br/inventario-florestal-e-inventario-floristico/\nTrabalho em DUPLAS (15 plantas - 6 famílias) ou TRIOS (21 plantas - 8 famílias)\nATENÇÃO: NÃO COLETAR NA PUC, SE TODO MUNDO FIZER ISSO TODO ANO ACABAM-SE AS PTERI DO CAMPUS.\nMUITA PRESSÃO DE COLETA\nPara o RA de Pteridófitas vocês vão coletar plantas em locais por vocês escolhidos (podem ser localidades diversas)\nAs plantas deverão estar:\nsecas e acondicionadas de acordo com os procedimentos de herborização usuais para os grupos (Fidalgo & Bononi 1989), Montadas em folhas sufite A4 em uma coleção científica Organizadas por ordem alfabética crescente de táxon. Determinadas até gênero\nExemplo de coleta\n\n\n\n\n\nFicha de coleta corretamente preenchida\n\n\n\n\n\nPlantas úmidas serão descartadas não valendo como coletas\nTodas as exsicatas devem estar com as fichas de tombo devidamente preenchidas, inclusive com o número de coleta. Todas as coletas devem estar secas, férteis, com parte do caule e identificadas até gênero, qualquer erro invalida a coleta. A coleção deve incluir: Em dupla: 15 espécies de pelo menos 6 famílias diferentes Em trios: 21 espécies de pelo menos 8 famílias diferentes  A entrega deve ainda incluir: Uma TABELA com as os gêneros e famílias coletados (ver o modelo)\nModelo de Tabela: As colunas “Fértil”, “Caule” e “Seco” servem para conferência pelo professor. A desorganização também desconta ponto\n\nChave on-line:\nhttp://www.plantsystematics.org/cgi-bin/dol/dol_diagkey.pl?matrix=fernfamily4.winc&new=1"
+  },
+  {
+    "objectID": "algas.html",
+    "href": "algas.html",
+    "title": "Algas & Fungos",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "algas.html#algas-e-fungos",
+    "href": "algas.html#algas-e-fungos",
+    "title": "Algas & Fungos",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "dendro.html",
+    "href": "dendro.html",
+    "title": "Dendrograma",
+    "section": "",
+    "text": "Um dendrograma de similaridade é uma representação gráfica em forma de árvore (semelhante a um cladrograma, mas não representa evolução). É amplamente utilizada para visualizar a relação entre objetos. Ele organiza os dados indicando quais amostras são mais parecidas entre si e formando “grupos” ou “ramos”.\n\n\n\n\n\nCarregar os dados (se ainda não estão carregados)\n\nlibrary(readxl)\nlibrary(writexl)\nsetwd(\"C:/Inventario\") \ndados &lt;- read_excel(\"Restinga.xlsx\")\n\nCarregar pacotes necessários para esta análise\n\nlibrary(vegan) \nlibrary(dplyr)\n\nCalcular a distância entre as parcelas e montar o dendrograma\n\nmatriz_freq &lt;- xtabs(~ Parcela + Especie, dados)\njaccard_dist &lt;- as.dist(betadiver(matriz_freq, \"j\"))\ndendrograma &lt;- hclust(jaccard_dist, method = \"complete\")\npar(mar = c(5, 4, 4, 2))  \nplot(dendrograma, \n     hang = -1,\n     main = \"Dendrograma - Jaccard\",\n     ylab = \"Altura do Cluster (Dissimilaridade)\",\n     xlab = \"Parcelas\",\n     cex = 0.7)\n\nps: cex = 0.7 = tamanho da fonte\n***MARCAR OS GRUPOS FORMADOS\n\nrect.hclust(dendrograma, k = 4, border = \"red\")",
+    "crumbs": [
+      "Inventário",
+      "Análises em R",
+      "Dendrograma"
+    ]
+  },
+  {
+    "objectID": "dendro.html#dendrograma-de-similaridade-entre-as-parcelas",
+    "href": "dendro.html#dendrograma-de-similaridade-entre-as-parcelas",
+    "title": "Dendrograma",
+    "section": "",
+    "text": "Um dendrograma de similaridade é uma representação gráfica em forma de árvore (semelhante a um cladrograma, mas não representa evolução). É amplamente utilizada para visualizar a relação entre objetos. Ele organiza os dados indicando quais amostras são mais parecidas entre si e formando “grupos” ou “ramos”.\n\n\n\n\n\nCarregar os dados (se ainda não estão carregados)\n\nlibrary(readxl)\nlibrary(writexl)\nsetwd(\"C:/Inventario\") \ndados &lt;- read_excel(\"Restinga.xlsx\")\n\nCarregar pacotes necessários para esta análise\n\nlibrary(vegan) \nlibrary(dplyr)\n\nCalcular a distância entre as parcelas e montar o dendrograma\n\nmatriz_freq &lt;- xtabs(~ Parcela + Especie, dados)\njaccard_dist &lt;- as.dist(betadiver(matriz_freq, \"j\"))\ndendrograma &lt;- hclust(jaccard_dist, method = \"complete\")\npar(mar = c(5, 4, 4, 2))  \nplot(dendrograma, \n     hang = -1,\n     main = \"Dendrograma - Jaccard\",\n     ylab = \"Altura do Cluster (Dissimilaridade)\",\n     xlab = \"Parcelas\",\n     cex = 0.7)\n\nps: cex = 0.7 = tamanho da fonte\n***MARCAR OS GRUPOS FORMADOS\n\nrect.hclust(dendrograma, k = 4, border = \"red\")",
+    "crumbs": [
+      "Inventário",
+      "Análises em R",
+      "Dendrograma"
+    ]
+  },
+  {
+    "objectID": "fanero.html",
+    "href": "fanero.html",
+    "title": "Fanerogamas",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "fanero.html#angiospermas-e-gimnospermas",
+    "href": "fanero.html#angiospermas-e-gimnospermas",
+    "title": "Fanerogamas",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "insta.html",
+    "href": "insta.html",
+    "title": "Instalando o R",
+    "section": "",
+    "text": "Instalar o R\nhttps://cran-r.c3sl.ufpr.br/\n\n\nANTES DE MAIS NADA\n1) Criem uma pasta chamada “Inventario” direto na raiz do drive “C:” –&gt; (SEM ACENTO)\n2) Copiem o arquivo do excel (dos dados) para esta pasta\n3) Simplifiquem o nome do arquivo do excel (Ex: de “FOM_Ctba 10x10 Cid. Industrial.xlsx” para “Ctba.xlsx” ou “Inventario.xlsx”)\n4) Vejam qual o tamanho das parcelas utilizadas no seu levantamento",
+    "crumbs": [
+      "Inventário",
+      "Utilizando o R",
+      "Instalando o R"
+    ]
+  },
+  {
+    "objectID": "invent.html",
+    "href": "invent.html",
+    "title": "Inventário e Avaliação da Biodiversidade Vegetal",
+    "section": "",
+    "text": "Na disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.\n\n\nEm equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)\nVocês irão realizar um inventário florestal e escrever relatório para “PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO” BASEADOS na Instrução Normativa do IAT (IN no. 48/2025)\nO relatório deve incluir\n\nCapa\níndice\nLista de tabelas\nLista de figuras\nCorpo do Trabalho:\n\n\nIdentificação\nInformações Gerais da Área Requerida\nMetodologia adotada\nResultados\nDiscussão\nReferencias\nAnexos\n\nCada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor\nAs análises dos dados serão realizados em Excel e no R\n\n\n\n1 - Manual técnico da vegetação brasileira : sistema fitogeográfico : inventário das formações florestais e campestres : técnicas e manejo de coleções botânicas : procedimentos para mapeamentos\nDisponível em:\nhttps://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=263011\n2 - RESOLUÇÃO CONAMA nº 2, de 18 de março de 1994 - Define formações vegetais primárias e estágios sucessionais de vegetação secundária, com finalidade de orientar os procedimentos de licenciamento de exploração da vegetação nativa no Estado do Paraná\nDisponível em:\nhttps://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994\n3- Resolução CONAMA n. 001/86 - Critérios básicos e diretrizes gerais para o Estudo de Impacto ambiental (EIA) e Relatório de Impacto Ambiental (RIMA)\nDisponível em:\nhttps://www.ibama.gov.br/sophia/cnia/legislacao/MMA/RE0001-230186.PDF\n4- Kersten, R.A. 2023. FITOSSOCIOLOGIA, Para uso na disciplina de Inventário e Avaliação da Biodiversidade Pontifícia Universidade Católica do Paraná.",
+    "crumbs": [
+      "Inventário",
+      "🔙 Voltar"
+    ]
+  },
+  {
+    "objectID": "invent.html#inventário-e-avaliação-da-biodiversidade",
+    "href": "invent.html#inventário-e-avaliação-da-biodiversidade",
+    "title": "Inventário e Avaliação da Biodiversidade Vegetal",
+    "section": "",
+    "text": "Na disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.\n\n\nEm equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)\nVocês irão realizar um inventário florestal e escrever relatório para “PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO” BASEADOS na Instrução Normativa do IAT (IN no. 48/2025)\nO relatório deve incluir\n\nCapa\níndice\nLista de tabelas\nLista de figuras\nCorpo do Trabalho:\n\n\nIdentificação\nInformações Gerais da Área Requerida\nMetodologia adotada\nResultados\nDiscussão\nReferencias\nAnexos\n\nCada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor\nAs análises dos dados serão realizados em Excel e no R\n\n\n\n1 - Manual técnico da vegetação brasileira : sistema fitogeográfico : inventário das formações florestais e campestres : técnicas e manejo de coleções botânicas : procedimentos para mapeamentos\nDisponível em:\nhttps://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=263011\n2 - RESOLUÇÃO CONAMA nº 2, de 18 de março de 1994 - Define formações vegetais primárias e estágios sucessionais de vegetação secundária, com finalidade de orientar os procedimentos de licenciamento de exploração da vegetação nativa no Estado do Paraná\nDisponível em:\nhttps://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994\n3- Resolução CONAMA n. 001/86 - Critérios básicos e diretrizes gerais para o Estudo de Impacto ambiental (EIA) e Relatório de Impacto Ambiental (RIMA)\nDisponível em:\nhttps://www.ibama.gov.br/sophia/cnia/legislacao/MMA/RE0001-230186.PDF\n4- Kersten, R.A. 2023. FITOSSOCIOLOGIA, Para uso na disciplina de Inventário e Avaliação da Biodiversidade Pontifícia Universidade Católica do Paraná.",
+    "crumbs": [
+      "Inventário",
+      "🔙 Voltar"
+    ]
+  },
+  {
+    "objectID": "morfo.html",
+    "href": "morfo.html",
+    "title": "Morfologia vegetal",
+    "section": "",
+    "text": "Morfologia Vegetal é uma disciplina teórico-prática do 1º período dos Cursos de Ciências Biológicas. Nela os estudantes integram conhecimentos referentes à estrutura e funcionamento básico das células, tecidos e órgãos vegetais relacionando-os ao ambiente e aos aspectos evolutivos das plantas. Ao final, são capazes de reconhecer as células e tecidos, sua função e importâncias ecológica.\n\n\n1 Modelo de Célula Vegetal\n\no trabalho consiste na confecção modelo de uma célula vegetal em material a escolha do aluno.\nA célula deve conter, no mínimo, as seguintes estruturas, em escalas próximas ao real (não é necessário representar o citoplasma)\n-   Parede celular\n-   plasmodesmos\n-   membrana plasmática\n-   núcleo\n-   cloroplastos\n-   tilacóides\n-   amiloplastos\n-   vacúolo\n-   mitocôndrias\n-   retículos endoplasmáticos liso\n-   retículos endoplasmáticos rugoso\n-   ribossomos\n-   microcorpos\n-   golgi\n-   citoesqueleto\nmodelos confeccionados em materiais reciclados/alternativo/não poluentes recebem 0,5 pto extra\n\n\n\n\n\n\n2 Dedrocronologia\nDendrocronologia é a ciência que usa os anéis de crescimento para analisar padrões ecológicos, como influencia do ambiente (solo, hidrologia, geologia, etc)  e estudar o clima presente e reconstruir o clima do passado.\nLeiam o seguinte texto\nhttps://matanativa.com.br/dendrocronologia-a-historia-que-as-arvores-contam/ Links to an external site. \nPara o trabalho vocês vão utilizar uma bolacha (disco) de um tronco de árvore\nEmbora vocês estejam trabalhando com um disco, é mais comum o uso de amostras não destrutivas retiradas com um trado de incremento (Sonda Pressler)\n\n\n\nTrado de Incremento\n\n\nEste ai de cima é um trado dendrológico desmontado\nEste aqui de baixo é um trado em ação\n\nCom ele é possível se retirar uma pequena amostra do caule para a contagem dos aneis\n\n\nVeja como se faz:\n  https://youtu.be/Dj09nnzYgpE? Links to an external site. \nSe tiver curiosidade veja também este link:\nhttps://youtu.be/AsbKcTOcZ7Q? Links to an external site. \nO primeiro passo é lixar o disco\n\nComeçando com lixas mais grosas (80). Se a madeira está muito irregular, pode-se começar até com lixa 60.\nAos poucos passa-se para lixas mais finas  (120 - 180 - 240 - 320 - 400) podendo chegar até em 600 em madeiras mais duras\nQuando a madeira estiver pronta, trace com um lápis, pelo menos duas linhas que saiam da medula e sigam perpendiculares até a casca. Nessa linha serão contados os anéis. Ao final, se quiserem podem passar a caneta. Isso funciona bem se utilizarem uma de ponta muito fina (0,1 ou 0,3) tipo nanquim.\nEscreva também seu nome e o ano em uma parte que não atrapalhe a contagem. Este material ficará em exposição no Lab\nOs anéis podem ser contados com uma lupa desde de que caiba o disco nela!\n\n\nMas vocês podem contar em casa utilizando a câmera do celular apoiado em um suporte qualquer\nSe você sabe o ano em que árvore foi coletada, pode traçar a história pretérita da árvore\nEsta aqui é a minha mesa de churrasco, eu cheguei até a lixa 600 e contei os anéis em casa com meu celular.\n\nEsta peroba foi cortada durante a construção da represa de Mauá da Serra em Jaguariaiva em 2012 e nasceu, possivelmente um pouquinho antes de 1758 (eu contei aneis até ai), junto com o Mozart.\nOQUE DEVE SER ENTREGUE\nO Disco propriamente lixado com:\n\naneis de crescimento marcados\nfinal do cerne (se está diferenciado)\nmarcas de fogo ou outras lesões\nmarcas de ramiicações ou galhos\nmarcas de insetos ou outras pragas\n\nUm documento (PDF) com o seguinte\n\nNomes da dupla\nNome da espécie analisada\nRegião, Estado e municípo da coleta\nTrês fotos (ao menos)\n\n\nDisco antes de ser lixado\nDisco finalizado com as marcações\nDetalhe do disco mostrando lenho inicial e tardio, vasos e fibras/traqueídeos\n\nInformações sobre o disco\n\nQual o diâmetro da bolacha (disco)?\nQuantos anéis foram registrados em cada linha? Houve diferença entre as linhas?  Explique.\nExistem marcas/lesões na madeira?  O que você acha que é? (Fogo, batida, predação, insto (broca), etc.)\nHá diferença entre cerne e alburno?\n\nResponda:\n\nHá diferença entre o crescimento nos anos iniciais e finais? Explique\nEm algum(uns) ano(s) foram registrados crescimentos menores ou maiores que a média? Justifique"
+  },
+  {
+    "objectID": "morfo.html#morfologia-vegetal-para-biologia---pucpr",
+    "href": "morfo.html#morfologia-vegetal-para-biologia---pucpr",
+    "title": "Morfologia vegetal",
+    "section": "",
+    "text": "Morfologia Vegetal é uma disciplina teórico-prática do 1º período dos Cursos de Ciências Biológicas. Nela os estudantes integram conhecimentos referentes à estrutura e funcionamento básico das células, tecidos e órgãos vegetais relacionando-os ao ambiente e aos aspectos evolutivos das plantas. Ao final, são capazes de reconhecer as células e tecidos, sua função e importâncias ecológica.\n\n\n1 Modelo de Célula Vegetal\n\no trabalho consiste na confecção modelo de uma célula vegetal em material a escolha do aluno.\nA célula deve conter, no mínimo, as seguintes estruturas, em escalas próximas ao real (não é necessário representar o citoplasma)\n-   Parede celular\n-   plasmodesmos\n-   membrana plasmática\n-   núcleo\n-   cloroplastos\n-   tilacóides\n-   amiloplastos\n-   vacúolo\n-   mitocôndrias\n-   retículos endoplasmáticos liso\n-   retículos endoplasmáticos rugoso\n-   ribossomos\n-   microcorpos\n-   golgi\n-   citoesqueleto\nmodelos confeccionados em materiais reciclados/alternativo/não poluentes recebem 0,5 pto extra\n\n\n\n\n\n\n2 Dedrocronologia\nDendrocronologia é a ciência que usa os anéis de crescimento para analisar padrões ecológicos, como influencia do ambiente (solo, hidrologia, geologia, etc)  e estudar o clima presente e reconstruir o clima do passado.\nLeiam o seguinte texto\nhttps://matanativa.com.br/dendrocronologia-a-historia-que-as-arvores-contam/ Links to an external site. \nPara o trabalho vocês vão utilizar uma bolacha (disco) de um tronco de árvore\nEmbora vocês estejam trabalhando com um disco, é mais comum o uso de amostras não destrutivas retiradas com um trado de incremento (Sonda Pressler)\n\n\n\nTrado de Incremento\n\n\nEste ai de cima é um trado dendrológico desmontado\nEste aqui de baixo é um trado em ação\n\nCom ele é possível se retirar uma pequena amostra do caule para a contagem dos aneis\n\n\nVeja como se faz:\n  https://youtu.be/Dj09nnzYgpE? Links to an external site. \nSe tiver curiosidade veja também este link:\nhttps://youtu.be/AsbKcTOcZ7Q? Links to an external site. \nO primeiro passo é lixar o disco\n\nComeçando com lixas mais grosas (80). Se a madeira está muito irregular, pode-se começar até com lixa 60.\nAos poucos passa-se para lixas mais finas  (120 - 180 - 240 - 320 - 400) podendo chegar até em 600 em madeiras mais duras\nQuando a madeira estiver pronta, trace com um lápis, pelo menos duas linhas que saiam da medula e sigam perpendiculares até a casca. Nessa linha serão contados os anéis. Ao final, se quiserem podem passar a caneta. Isso funciona bem se utilizarem uma de ponta muito fina (0,1 ou 0,3) tipo nanquim.\nEscreva também seu nome e o ano em uma parte que não atrapalhe a contagem. Este material ficará em exposição no Lab\nOs anéis podem ser contados com uma lupa desde de que caiba o disco nela!\n\n\nMas vocês podem contar em casa utilizando a câmera do celular apoiado em um suporte qualquer\nSe você sabe o ano em que árvore foi coletada, pode traçar a história pretérita da árvore\nEsta aqui é a minha mesa de churrasco, eu cheguei até a lixa 600 e contei os anéis em casa com meu celular.\n\nEsta peroba foi cortada durante a construção da represa de Mauá da Serra em Jaguariaiva em 2012 e nasceu, possivelmente um pouquinho antes de 1758 (eu contei aneis até ai), junto com o Mozart.\nOQUE DEVE SER ENTREGUE\nO Disco propriamente lixado com:\n\naneis de crescimento marcados\nfinal do cerne (se está diferenciado)\nmarcas de fogo ou outras lesões\nmarcas de ramiicações ou galhos\nmarcas de insetos ou outras pragas\n\nUm documento (PDF) com o seguinte\n\nNomes da dupla\nNome da espécie analisada\nRegião, Estado e municípo da coleta\nTrês fotos (ao menos)\n\n\nDisco antes de ser lixado\nDisco finalizado com as marcações\nDetalhe do disco mostrando lenho inicial e tardio, vasos e fibras/traqueídeos\n\nInformações sobre o disco\n\nQual o diâmetro da bolacha (disco)?\nQuantos anéis foram registrados em cada linha? Houve diferença entre as linhas?  Explique.\nExistem marcas/lesões na madeira?  O que você acha que é? (Fogo, batida, predação, insto (broca), etc.)\nHá diferença entre cerne e alburno?\n\nResponda:\n\nHá diferença entre o crescimento nos anos iniciais e finais? Explique\nEm algum(uns) ano(s) foram registrados crescimentos menores ou maiores que a média? Justifique"
+  }
+]

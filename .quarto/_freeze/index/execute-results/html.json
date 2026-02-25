@@ -1,0 +1,17 @@
+{
+  "hash": "3184b7ef9bf8b1c476555a7e0a781fd4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Início\"\nformat: html\nabout: solana\nimage: profile.jpg\n---\n\n\n### This content appears above the formatted about page content.\n\n:::{#hero-heading}\n\nBiólogo, Professor de Botânica e areas correlatas da Pontifícia Universidade Católica do Paraná.\n\n## Formação\n\nUniversidade Federal do Paraná, Curitiba | Paraná, BR\nDr. em Engenharia Floresta - Conservação da Natureza\n\n\n## Experience\n\nProfessor | Botânica | 2002 - present\n\nCoordenador | Comissão de Ecologia Vegetal da Sociedade Brasileira de Botânica | 2018 - 2022\n\n\n\n## Prof. Dr. Pontifícia Universidade Católica do Paraná\n\nArquivos das aulas práticas e teóricas das disciplinas ministradas na PUCPR. ![](AVA.png){width=\"100\"}\n\nVocês também podem acessar as atividades e o conteúdo direto pelo [Ambiente Virtual de Aprendizagem](https://www.pucpr.br/ava)\n\nAcessem meu currículo no [Lattes](https://lattes.cnpq.br/2127883418769406) ![](lattes.png){width=\"100\"}\n\nAcessem minhas publicações no [Google Acadêmico](https://scholar.google.com.br/citations?hl=pt-BR&pli=1&user=8OwfqwgAAAAJ) ![Citações por outros autores de meus artigos](Citacoes.png){width=\"88\"}\n\n## Disciplinas Ministradas no Curso de Biologia\n\n-   Morfologia Vegetal\n\n-   Biodiversidade de Algas e Fungos\n\n-   Biodiversidade de Briófitas e Pteridófitas\n\n-   Biodiversidade de Fanerógamas\n\n-   Inventário e avaliação da biodiversidade - Flora\n\n-   Ecologia da Restauração\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,35 @@
+---
+title: "Análises em excel"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+Digitem os dados coletados em campo em uma planilha do Excel com a seguinte Estrutura:
+
+Coluna A: Parcela
+
+Coluna B: Especie =\> (Sem acento)
+
+Coluna C: PAP =\> (em cm)
+
+Coluna D: Alt =\> (altura, em metros)
+
+Coluna E: Posicao =\> sem acento nem sinal cedilha
+
+![](parcela.png){width="500"}
+
+**Planilha para os cálculos de Volume e Suficiência**
+
+[Volume](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\vol.xlsx)
+
+**Planilha para gráfico da distribuição de DAP, PAP e Altura**
+
+[DAP](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\dap.xlsx)

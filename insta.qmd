@@ -1,0 +1,23 @@
+---
+title: "Instalando o R"
+format: html
+editor: visual
+---
+
+***Instalar o R***
+
+<https://cran-r.c3sl.ufpr.br/>
+
+![](R1.png){width="800"}
+
+![](r2.png){width="700"}
+
+**ANTES DE MAIS NADA**
+
+1\) Criem uma pasta chamada "Inventario" direto na raiz do drive "C:" --\> (**SEM ACENTO**)
+
+2\) Copiem o arquivo do excel (dos dados) para esta pasta
+
+3) Simplifiquem o nome do arquivo do excel (Ex: de "FOM_Ctba 10x10 Cid. Industrial.xlsx" para "Ctba.xlsx" ou "Inventario.xlsx")
+
+4\) Vejam qual o tamanho das parcelas utilizadas no seu levantamento

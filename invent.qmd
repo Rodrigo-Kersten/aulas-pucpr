@@ -1,0 +1,73 @@
+---
+title: "Inventário e Avaliação da Biodiversidade Vegetal"
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github   
+---
+
+## Inventário e Avaliação da Biodiversidade
+
+Na disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.
+
+### Inventário Florestal
+
+Em equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)
+
+Vocês irão realizar um inventário florestal e escrever relatório para "PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO" BASEADOS na [Instrução Normativa do IAT (IN no. 48/2025)](https://geopr.iat.pr.gov.br/img/catalogo-de-legislacoes/)
+
+O relatório deve incluir
+
+1.  Capa
+2.  índice
+3.  Lista de tabelas
+4.  Lista de figuras
+5.  Corpo do Trabalho:
+
+-   Identificação
+-   Informações Gerais da Área Requerida
+-   Metodologia adotada
+-   Resultados
+-   Discussão
+-   Referencias
+-   Anexos
+
+Cada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor
+
+As análises dos dados serão realizados em Excel e no R
+
+
+
+
+
+
+<div>
+
+### Bibliografia Recomendada
+
+1 - Manual técnico da vegetação brasileira : sistema fitogeográfico : inventário das formações florestais e campestres : técnicas e manejo de coleções botânicas : procedimentos para mapeamentos
+
+Disponível em:
+
+<https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=263011>
+
+2 - RESOLUÇÃO CONAMA nº 2, de 18 de março de 1994 - Define formações vegetais primárias e estágios sucessionais de vegetação secundária, com finalidade de orientar os procedimentos de licenciamento de exploração da vegetação nativa no Estado do Paraná
+
+Disponível em:
+
+<https://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994>
+
+3- Resolução CONAMA n. 001/86 - Critérios básicos e diretrizes gerais para o Estudo de Impacto ambiental (EIA) e Relatório de Impacto Ambiental (RIMA)
+
+Disponível em:
+
+<https://www.ibama.gov.br/sophia/cnia/legislacao/MMA/RE0001-230186.PDF>
+
+4- Kersten, R.A. 2023. [FITOSSOCIOLOGIA](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\Fito.pdf), Para uso na disciplina de Inventário e Avaliação da Biodiversidade Pontifícia Universidade Católica do Paraná.
+
+</div>

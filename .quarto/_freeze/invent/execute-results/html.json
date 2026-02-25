@@ -1,0 +1,17 @@
+{
+  "hash": "66f025e9038843cc7e9a33a01d081b68",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat:\n  html:\n    theme: \n      light: cosmo          \n    code-copy: true        \n    code-overflow: scroll   \n    code-block-bg: \"#f6f8fa\"  \n    code-block-border-left: \"#24292f\"  \n    highlight-style: github    \n---\n\n## Inventário e Avaliação da Biodiversidade\n\nNa disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.\n\n### Inventário Florestal\n\nEm equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)\n\nVocês irão realizar um inventário florestal e escrever relatório para \"PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO\" BASEADOS na [Instrução Normativa do IAT (IN no. 48/2025)](https://geopr.iat.pr.gov.br/img/catalogo-de-legislacoes/)\n\nO relatório deve incluir\n\n-   Capa\n\n-   índice\n\n-   Lista de tabelas\n\n-   Lista de figuras\n\n-   Tópicos:\n\n1.  Identificação\n2.  Informações Gerais da Área Requerida\n3.  Metodologia adotada\n4.  Resultados\n5.  Discussão\n6.  Referencias\n7.  Anexos\n\nCada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor\n\n\n::: {.cell}\n\n:::\n\n\n### Bibliografia Recomendada\n\n1 - Manual técnico da vegetação brasileira : sistema fitogeográfico : inventário das formações florestais e campestres : técnicas e manejo de coleções botânicas : procedimentos para mapeamentos\n\nDisponível em:\n\n<https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&id=263011>\n\n2 - RESOLUÇÃO CONAMA nº 2, de 18 de março de 1994 - Define formações vegetais primárias e estágios sucessionais de vegetação secundária, com finalidade de orientar os procedimentos de licenciamento de exploração da vegetação nativa no Estado do Paraná\n\nDisponível em:\n\n<https://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994>\n",
+    "supporting": [
+      "invent_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
