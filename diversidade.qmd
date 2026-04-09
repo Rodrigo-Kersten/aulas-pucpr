@@ -1,5 +1,8 @@
 ---
 title: "Diversidade"
+description: "Cálculo de índices de diversidade em inventários florestais"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
 format:
   html:
     theme: 
@@ -14,11 +17,9 @@ editor: visual
 
 ## Cálculo de índices de Diversidade
 
-Índices de diversidade são métricas amplamente aplicados em ecologia. São utilizadas usadas para quantificar a riquesa e a abundância relativa em uma comunidade. Eles combinam dois componentes principais: riqueza de espécies (número total de espécies ou categorias) e equitabilidade (ou uniformidade, que mede o quão igualitariamente os indivíduos estão distribuídos entre as espécies).
-Índices ajudam a comparar comunidades e avaliar a saúde de ecossistemas, mas devem ser interpretados com cuidado, pois diferentes índice podem das também diferentes resultados. 
+Índices de diversidade são métricas amplamente aplicados em ecologia. São utilizadas usadas para quantificar a riquesa e a abundância relativa em uma comunidade. Eles combinam dois componentes principais: riqueza de espécies (número total de espécies ou categorias) e equitabilidade (ou uniformidade, que mede o quão igualitariamente os indivíduos estão distribuídos entre as espécies). Índices ajudam a comparar comunidades e avaliar a saúde de ecossistemas, mas devem ser interpretados com cuidado, pois diferentes índice podem das também diferentes resultados.
 
-
-![](megsdiverse.png){fig-align="center" width="300"}
+![](megadiverse.webp){fig-align="center" width="300"}
 
 ***Carregar os dados*** (se ainda não estão carregados)
 
@@ -59,7 +60,6 @@ indices <- data.frame(Indice = 'Valor',
 
 ```
 
-
 ***Observar os resultados***
 
 ```{r eval=FALSE}
@@ -67,7 +67,7 @@ indices
 ```
 
 ***Salvar em Excel***
+
 ```{r eval=FALSE}
 write_xlsx(indices, "Diversidade.xlsx")
 ```
-

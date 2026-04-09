@@ -1,5 +1,8 @@
 ---
 title: "Perfil da Vegetação"
+description: "Tutorial simplificado para criação de perfil de vegatação para inventários florestais"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
 format:
   html:
     theme: 
@@ -16,7 +19,7 @@ editor: visual
 
 Perfil de vegetação é uma imagem que mostra a estrutura vertical e horizontal de uma formação vegetal. Baseada no levantamento fitossociológico ela destaca os diferentes estratos de uma floresta e suas principais espécies. É utilizado para auxiliar na descrição de uma comunidade vegetal.
 
-![](perfil.gif){fig-align="center" width="500"}
+![](perfil.webp){fig-align="center" width="500"}
 
 ------------------------------------------------------------------------
 

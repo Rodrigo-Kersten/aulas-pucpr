@@ -1,5 +1,8 @@
 ---
 title: "Gráficos Valor de Importância"
+escription: "Montagem dos gráficos do Valor de importância das principais espécies registras em inventário florestal"
+author: "Rodrigo Kersten"
+categories: [Botânica, Inventário e Avaliação da Biodiversidade, IVI, valor de importância, gráficos]
 format:
   html:
     theme: 
@@ -14,7 +17,9 @@ editor: visual
 
 ##Gráficos do Valor de Importância
 
-O Gráfico do valor de importancia ilustra tanto o valor de importância das principais espécies amostradas como os componteste do IVI (Frequencia, Densidade e Dominancia) permitindo que interpretações ecológicas sejam retiradas da análise. Esta figura ajuda a compreender porque determinada espécie é mais importante e como o a comunidade de estrutura. ![](ivi.png){fig-align="center" width="300"}
+O Gráfico do valor de importancia ilustra tanto o valor de importância das principais espécies amostradas como os componteste do IVI (Frequencia, Densidade e Dominancia) permitindo que interpretações ecológicas sejam retiradas da análise. Esta figura ajuda a compreender porque determinada espécie é mais importante e como o a comunidade de estrutura.
+
+![](ivi.webp){fig-align="center" width="300"}
 
 ***ATENÇÃO***
 
@@ -79,6 +84,8 @@ tabela_fito_long %>%
 
 ------------------------------------------------------------------------
 
-Para trocar as cores do gráfico substituam o 'Set2' (palette = 'Set2') pela paleta escolhida Vejam em [PalleteChart.pdf](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\PalleteChart.pdf)
+Para trocar as cores do gráfico, substituam 'Set2' (palette = 'Set2') pela paleta escolhida.
+
+Vejam em [PalleteChart.pdf](files\PalleteChart.pdf){target="_blank" rel="noopener noreferrer"}
 
 Neste caso, não estamos trocando cores individuais, mas grupos de tonalidades (paletas).

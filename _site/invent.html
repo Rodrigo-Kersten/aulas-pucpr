@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rodrigo Kersten">
+<meta name="description" content="Planejamento e execução de inventários florestais, Levantamentos Fitossociológicos e Avaliação da Biodiversidade Vegetal. Material didático da PUCPR">
 
 <title>Inventário e Avaliação da Biodiversidade Vegetal – Rodrigo Kersten</title>
 <style>
@@ -30,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./excel.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -40,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fa9ed21e17cd494e347a1555e8dafba1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-24a636f9ee31d1685cc13e86251557ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,11 +71,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="canonical" href="https://rkersten.netlify.app/">
 
 
+<meta property="og:title" content="Inventário e Avaliação da Biodiversidade Vegetal – Rodrigo Kersten">
+<meta property="og:description" content="Planejamento e execução de inventários florestais, Levantamentos Fitossociológicos e Avaliação da Biodiversidade Vegetal. Material didático da PUCPR">
+<meta property="og:image" content="https://rkersten.netlify.app/invent.webp">
+<meta property="og:site_name" content="Rodrigo Kersten">
+<meta name="twitter:title" content="Inventário e Avaliação da Biodiversidade Vegetal – Rodrigo Kersten">
+<meta name="twitter:description" content="Planejamento e execução de inventários florestais, Levantamentos Fitossociológicos e Avaliação da Biodiversidade Vegetal. Material didático da PUCPR">
+<meta name="twitter:image" content="https://rkersten.netlify.app/invent.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -102,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Algas&amp;Fungos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./brio.html"> <i class="bi bi-incognito" role="img">
+    <a class="nav-link" href="./cripto.html"> <i class="bi bi-incognito" role="img">
 </i> 
 <span class="menu-text">Criptógamas</span></a>
   </li>  
@@ -121,6 +133,16 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text">Restauração</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ident.html"> <i class="bi bi-archive" role="img">
+</i> 
+<span class="menu-text">Identificação Botânica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./marumbi.html"> <i class="bi bi-camera" role="img">
+</i> 
+<span class="menu-text">Marumbi</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -132,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./invent.html">🔙 Voltar</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./invent.html">Inventário e Avaliação da Biodiversidade Vegetal</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -148,6 +170,12 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invent.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Inventário e Avaliação da Biodiversidade Vegetal</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -199,20 +227,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dendrograma</span></a>
+  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curva de Acumulação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Acumulação</span></a>
+  <a href="./sufi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suficiência Amostral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./diversidade.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Índices de Diversidade</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dendrograma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -224,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./perfil.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Perfi da Vegetação</span></a>
+ <span class="menu-text">Perfil da Vegetação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -235,31 +269,53 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./invent.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">🔙 Voltar</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#inventário-e-avaliação-da-biodiversidade" id="toc-inventário-e-avaliação-da-biodiversidade" class="nav-link active" data-scroll-target="#inventário-e-avaliação-da-biodiversidade">Inventário e Avaliação da Biodiversidade</a>
+  <ul class="collapse">
+  <li><a href="#inventário-florestal" id="toc-inventário-florestal" class="nav-link" data-scroll-target="#inventário-florestal">Inventário Florestal</a></li>
+  <li><a href="#relatório-final-da-disciplina" id="toc-relatório-final-da-disciplina" class="nav-link" data-scroll-target="#relatório-final-da-disciplina">Relatório Final da Disciplina</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Inventário e Avaliação da Biodiversidade Vegetal</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Botânica</div>
+    <div class="quarto-category">Inventário Florestal</div>
+    <div class="quarto-category">Fitossociologia</div>
+    <div class="quarto-category">Avaliação da Biodiversidade</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Planejamento e execução de inventários florestais, Levantamentos Fitossociológicos e Avaliação da Biodiversidade Vegetal. Material didático da PUCPR
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rodrigo Kersten </p>
+          </div>
+  </div>
     
   
     
@@ -275,48 +331,27 @@ ul.task-list li input[type="checkbox"] {
 <p>Na disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.</p>
 <section id="inventário-florestal" class="level3">
 <h3 class="anchored" data-anchor-id="inventário-florestal">Inventário Florestal</h3>
-<p>Para saber mais sobre invetários, acessem a seguinte página:</p>
-<p><a href="https://matanativa.com.br/inventario-florestal-para-supressao-de-vegetacao/" class="uri">https://matanativa.com.br/inventario-florestal-para-supressao-de-vegetacao/</a></p>
+<p><strong><em>Inventário e avaliação da biodiversidade</em></strong> são processos essenciais para compreender, monitorar e proteger a diversidade de espécies e ecossistemas. O <strong><em>inventário</em></strong> envolve a identificação e caracterização de espécies em uma área, podendo focar em flora (como em inventários florestais) ou fauna (como levantamentos faunísticos). São fundamentais para o licenciamento ambiental, planejamento de manejo, conservação e educação ambiental A <strong><em>avaliação da biodiversidade</em></strong> vai além da identificação, envolvendo a análise da riqueza, equabilidade e distribuição das espécies, além da avaliação do estado de conservação e das interações ecológicas sendo fundamental nas pesquisas sobre ecologia e conservação da natureza.</p>
+<p>Para saber mais sobre inventários, acessem a seguinte página:</p>
+<p><a href="https://matanativa.com.br/inventario-florestal-para-supressao-de-vegetacao/" target="_blank" rel="noopener noreferrer">Inventários Florestais para supressão de Vegetação</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="invent.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bar2.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
 </section>
-<section id="inventário---relatório-final-da-disciplina" class="level3">
-<h3 class="anchored" data-anchor-id="inventário---relatório-final-da-disciplina">Inventário - Relatório Final da Disciplina</h3>
-<p>Em equipes de 3 ou 4 pessoas (equipes maiores terão a nota proporcionalmente reduzida)</p>
-<p>Vocês irão realizar um inventário florestal e escrever relatório para “PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO” BASEADOS na <a href="https://geopr.iat.pr.gov.br/img/catalogo-de-legislacoes/">Instrução Normativa do IAT (IN no. 48/2025)</a></p>
-<p>O relatório deve incluir</p>
-<ol type="1">
-<li>Capa</li>
-<li>índice</li>
-<li>Lista de tabelas</li>
-<li>Lista de figuras</li>
-<li>Corpo do Trabalho:</li>
-</ol>
-<ul>
-<li>Identificação</li>
-<li>Informações Gerais da Área Requerida</li>
-<li>Metodologia adotada</li>
-<li>Resultados</li>
-<li>Discussão</li>
-<li>Referencias</li>
-<li>Anexos</li>
-</ul>
-<p>Cada equipe analisará um conjunto diferente de dados reais fornecidos pelo professor</p>
-<p>As análises dos dados serão realizados em Excel e no R</p>
-</section>
-<section id="bibliografia-recomendada" class="level3">
-<h3 class="anchored" data-anchor-id="bibliografia-recomendada">Bibliografia Recomendada</h3>
-<p>1 - Manual técnico da vegetação brasileira : sistema fitogeográfico : inventário das formações florestais e campestres : técnicas e manejo de coleções botânicas : procedimentos para mapeamentos</p>
-<p>Disponível em:</p>
-<p><a href="https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&amp;id=263011" class="uri">https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?view=detalhes&amp;id=263011</a></p>
-<p>2 - RESOLUÇÃO CONAMA nº 2, de 18 de março de 1994 - Define formações vegetais primárias e estágios sucessionais de vegetação secundária, com finalidade de orientar os procedimentos de licenciamento de exploração da vegetação nativa no Estado do Paraná</p>
-<p>Disponível em:</p>
-<p><a href="https://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994" class="uri">https://snif.florestal.gov.br/images/pdf/legislacao/resolucoes_conselho/resolucao_conama_02_1994</a></p>
-<p>3- Resolução CONAMA n.&nbsp;001/86 - Critérios básicos e diretrizes gerais para o Estudo de Impacto ambiental (EIA) e Relatório de Impacto Ambiental (RIMA)</p>
-<p>Disponível em:</p>
-<p><a href="https://www.ibama.gov.br/sophia/cnia/legislacao/MMA/RE0001-230186.PDF" class="uri">https://www.ibama.gov.br/sophia/cnia/legislacao/MMA/RE0001-230186.PDF</a></p>
-<p>4- Kersten, R.A. 2023. <a href="C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\Fito.pdf">FITOSSOCIOLOGIA</a>, Para uso na disciplina de Inventário e Avaliação da Biodiversidade Pontifícia Universidade Católica do Paraná.</p>
-</section>
+<section id="relatório-final-da-disciplina" class="level3">
+<h3 class="anchored" data-anchor-id="relatório-final-da-disciplina">Relatório Final da Disciplina</h3>
+<p>Como avaliação da disciplina vocês farão uma atividade simulada de um “PEDIDO DE AUTORIZAÇÃO DE SUPRESSÃO DA VEGETAÇÃO” BASEADOS na Instrução Normativa do IAT. Para isso, vocês vão passar por todos os passos de um inventário sobre ecologia vegetal, desde a coleta de dados até a análise e redação final do relatório. Estes procedimentos são utilizados tanto em consultoria ambiental como em qualquer estudo sobre ecologia de comunidades vegetais ou sobre biodiversidade.</p>
+<p><a href="./relinvent.html"><strong><em>Relatório Final da Disciplina</em></strong></a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -393,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -720,6 +755,15 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./excel.html" class="pagination-link" aria-label="Análises em Excel">
+        <span class="nav-page-text">Análises em Excel</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

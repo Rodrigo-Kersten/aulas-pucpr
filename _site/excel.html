@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rodrigo Kersten">
+<meta name="description" content="Montando e verificando os dados nas planilhas excel para inventário florestal">
 
 <title>Análises em excel – Rodrigo Kersten</title>
 <style>
@@ -30,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./insta.html" rel="next">
+<link href="./invent.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,11 +72,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="canonical" href="https://rkersten.netlify.app/">
 
 
+<meta property="og:title" content="Análises em excel – Rodrigo Kersten">
+<meta property="og:description" content="Montando e verificando os dados nas planilhas excel para inventário florestal">
+<meta property="og:image" content="https://rkersten.netlify.app/papdap.webp">
+<meta property="og:site_name" content="Rodrigo Kersten">
+<meta name="twitter:title" content="Análises em excel – Rodrigo Kersten">
+<meta name="twitter:description" content="Montando e verificando os dados nas planilhas excel para inventário florestal">
+<meta name="twitter:image" content="https://rkersten.netlify.app/papdap.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -102,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Algas&amp;Fungos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./brio.html"> <i class="bi bi-incognito" role="img">
+    <a class="nav-link" href="./cripto.html"> <i class="bi bi-incognito" role="img">
 </i> 
 <span class="menu-text">Criptógamas</span></a>
   </li>  
@@ -120,6 +133,16 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./restaura.html"> <i class="bi bi-image-alt" role="img">
 </i> 
 <span class="menu-text">Restauração</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ident.html"> <i class="bi bi-archive" role="img">
+</i> 
+<span class="menu-text">Identificação Botânica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./marumbi.html"> <i class="bi bi-camera" role="img">
+</i> 
+<span class="menu-text">Marumbi</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -148,6 +171,12 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inventário e Avaliação da Biodiversidade Vegetal</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -199,20 +228,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dendrograma</span></a>
+  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curva de Acumulação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Acumulação</span></a>
+  <a href="./sufi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suficiência Amostral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./diversidade.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Índices de Diversidade</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dendrograma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -224,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./perfil.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Perfi da Vegetação</span></a>
+ <span class="menu-text">Perfil da Vegetação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -235,31 +270,49 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./invent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔙 Voltar</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#análise-dos-parâmetros-de-estágios-sucessionais" id="toc-análise-dos-parâmetros-de-estágios-sucessionais" class="nav-link active" data-scroll-target="#análise-dos-parâmetros-de-estágios-sucessionais">1 - Análise dos Parâmetros de Estágios Sucessionais</a></li>
+  <li><a href="#analise-dos-dados-coletados-na-fitossociologia" id="toc-analise-dos-dados-coletados-na-fitossociologia" class="nav-link" data-scroll-target="#analise-dos-dados-coletados-na-fitossociologia">2 - Analise dos Dados coletados na fitossociologia</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./excel.html">Excel</a></li><li class="breadcrumb-item"><a href="./excel.html">Análises em Excel</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Análises em excel</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Excel</div>
+    <div class="quarto-category">tutorial</div>
+    <div class="quarto-category">data-science</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Montando e verificando os dados nas planilhas excel para inventário florestal
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rodrigo Kersten </p>
+          </div>
+  </div>
     
   
     
@@ -270,19 +323,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="análise-dos-parâmetros-de-estágios-sucessionais" class="level3">
+<h3 class="anchored" data-anchor-id="análise-dos-parâmetros-de-estágios-sucessionais">1 - Análise dos Parâmetros de Estágios Sucessionais</h3>
+<p>Utilizando a seguinte Planilha do Excel <strong>Planilha para gráfico da distribuição de DAP, PAP e Altura</strong></p>
+<p><a href="files\dap.xlsx" target="_blank" rel="noopener noreferrer">DAP</a></p>
+<p>Digitem os dados de PAP (perímetro - em cm) e Altura (em m) nas colunas em branco</p>
+<p><img src="papdap.webp" class="img-fluid" width="500"></p>
+<hr>
+</section>
+<section id="analise-dos-dados-coletados-na-fitossociologia" class="level3">
+<h3 class="anchored" data-anchor-id="analise-dos-dados-coletados-na-fitossociologia">2 - Analise dos Dados coletados na fitossociologia</h3>
 <p>Digitem os dados coletados em campo em uma planilha do Excel com a seguinte Estrutura:</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>Coluna A: Parcela</p>
 <p>Coluna B: Especie =&gt; (Sem acento)</p>
 <p>Coluna C: PAP =&gt; (em cm)</p>
 <p>Coluna D: Alt =&gt; (altura, em metros)</p>
 <p>Coluna E: Posicao =&gt; sem acento nem sinal cedilha</p>
-<p><img src="parcela.png" class="img-fluid" width="500"></p>
-<p><strong>Planilha para os cálculos de Volume e Suficiência</strong></p>
-<p><a href="C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\vol.xlsx">Volume</a></p>
-<p><strong>Planilha para gráfico da distribuição de DAP, PAP e Altura</strong></p>
-<p><a href="C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\dap.xlsx">DAP</a></p>
+</div>
+</div>
+</div>
+<p>Como neste Exemplo</p>
+<p><img src="parcela.webp" class="img-fluid" width="500"></p>
+<p>COPIEM OS SEGUINTES ARQUIVOS E INCLUAM SEUS DADOS NELES</p>
+<p><strong>Planilha para os cálculos Volume por parcela e por espécie</strong></p>
+<p><a href="files/vol.xlsx" target="_blank" rel="noopener noreferrer">Suficiência</a></p>
+<p><strong>Planilha para os cálculos de Suficiência amostral por Volume</strong></p>
+<p><a href="files/sufi.xlsx" target="_blank" rel="noopener noreferrer">Volume</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -358,7 +433,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -685,6 +760,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./invent.html" class="pagination-link" aria-label="Inventário e Avaliação da Biodiversidade Vegetal">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Inventário e Avaliação da Biodiversidade Vegetal</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./insta.html" class="pagination-link" aria-label="Instalando o R">
+        <span class="nav-page-text">Instalando o R</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

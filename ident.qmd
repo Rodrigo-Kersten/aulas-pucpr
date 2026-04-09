@@ -1,0 +1,20 @@
+---
+title: "Identificação"
+format:
+  html:
+    sidebar: false
+---
+
+## Arquivos para download sobre Identificação Botânica e Inventários Realizados em FOM
+
+![](lupa1.webp){fig-align="center" width="400"}
+
+### Pasta do Mega com os arquivos de Identificação Botânica
+
+(atualizado com alguma frequência)
+
+[![](mega.webp){width="50"}](https://mega.nz/folder/Ih0wQLQS#UYGIM5f5iwvlByAjX4Fn2g){target="_blank" rel="noopener noreferrer"}
+
+### Arquivo do Google Earth com os estudos realizado em FOM por localidade
+
+[![](earth.webp){width="50"}](files/fom.kmz){target="_blank" rel="noopener noreferrer"}

@@ -1,0 +1,41 @@
+---
+title: "Modelo de Célula Vegetal"
+description: "Biologia Celular, Anatomia e morfologia vegetal"
+author: "Rodrigo Kersten"
+categories: [Botânica, Morfologia, Célula, Modelo Didático]
+format:
+  html:
+    sidebar: false
+    code-copy: true
+    code-tools: true
+---
+
+### 1 Modelo de Célula Vegetal
+
+![](celula.webp){fig-align="center" width="300"}
+
+o trabalho consiste na confecção modelo de uma célula vegetal em material a escolha do aluno.
+
+A célula deve conter, no mínimo, as seguintes estruturas, em escalas próximas ao real (***não*** é necessário representar o citoplasma)
+
+::: callout
+-   Parede celular
+-   plasmodesmos
+-   membrana plasmática
+-   núcleo
+-   cloroplastos
+-   tilacóides
+-   amiloplastos
+-   vacúolo
+-   mitocôndrias
+-   retículos endoplasmáticos liso
+-   retículos endoplasmáticos rugoso
+-   ribossomos
+-   microcorpos
+-   golgi
+-   citoesqueleto
+:::
+
+**modelos confeccionados em materiais reciclados/alternativo/não poluentes recebem 0,5 pto extra**
+
+![](cell.webp){fig-align="center" width="100"}

@@ -1,5 +1,8 @@
 ---
 title: "Dendrograma"
+description: "Contruindo um dendrograma de Similaridade entre parcelas"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
 format:
   html:
     theme: 
@@ -16,7 +19,7 @@ editor: visual
 
 Um dendrograma de similaridade é uma representação gráfica em forma de árvore (semelhante a um cladrograma, mas não representa evolução). É amplamente utilizada para visualizar a relação entre objetos. Ele organiza os dados indicando quais amostras são mais parecidas entre si e formando "grupos" ou "ramos".
 
-![](dendog.png){fig-align="center" width="300"}
+![](dendog.webp){fig-align="center" width="300"}
 
 ***Carregar os dados*** (se ainda não estão carregados)
 

@@ -1,57 +1,123 @@
 project:
   type: website
+  
+resources:
+  - googlef80438fcf1b3d846.html
+  - imagerak.webp
 
 website:
+  page-navigation: true
   title: "Rodrigo Kersten"
+  description: "Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR." # 
+  image: "https://rkersten.netlify.app/imagerak.webp"
+  twitter-card: true
+  open-graph: true
   navbar:
     left:
       - href: morfo.qmd
         text: "Morfologia"
         icon: leaf
+        
       - href: algas.qmd
         text: "Algas&Fungos"
         icon: slack
-      - href: brio.qmd
+        
+      - href: cripto.qmd
         text: "Criptógamas"
         icon: incognito
+        
       - href: fanero.qmd
         text: "Fanerógamas"
         icon: flower3
+        
       - href: invent.qmd
         text: "Inventário"
         icon: tree-fill
+        
       - href: restaura.qmd
         text: "Restauração"
         icon: image-alt
+        
+      - href: ident.qmd
+        text: "Identificação Botânica"
+        icon: "archive"
+
+      - href: marumbi.qmd
+        text: "Marumbi"
+        icon: "camera"
 
   sidebar:
-    style: "docked"
-    title: "Inventário"
-    contents:
-      - section: "Excel"    
-        contents:
-          - text: "Análises em Excel"
-            href: excel.qmd
-      - section: "Utilizando o R"
-        contents:
-          - text: "Instalando o R"
-            href: insta.qmd
-          - text: "Introdução ao R"
-            href: intro.qmd
-      - section: "Análises em R"
-        contents:
-          - text: "Dendrograma"
-            href: dendro.qmd
-          - text: "Acumulação"
-            href: acumula.qmd 
-          - text: "Índices de Diversidade"
-            href: diversidade.qmd
-          - text: "Fitossociologia"
-            href: fitos.qmd 
-          - text: "Perfi da Vegetação"
-            href: perfil.qmd
-          - text: "Gráficos IVI"
-            href: ivi.qmd 
-      - "---"
-      - text: "🔙 Voltar"
-        href: invent.qmd
+    - title: "Inventário"
+      style: "docked"
+      contents:
+        - invent.qmd
+        - section: "Excel"
+          contents:
+            - text: "Análises em Excel"
+              href: excel.qmd
+
+        - section: "Utilizando o R"
+          contents:
+            - text: "Instalando o R"
+              href: insta.qmd
+
+            - text: "Introdução ao R"
+              href: intro.qmd
+
+        - section: "Análises em R"
+          contents:
+            - text: "Curva de Acumulação"
+              href: acumula.qmd
+
+            - text: "Suficiência Amostral"
+              href: sufi.qmd
+
+            - text: "Índices de Diversidade"
+              href: diversidade.qmd
+
+            - text: "Dendrograma"
+              href: dendro.qmd
+
+            - text: "Fitossociologia"
+              href: fitos.qmd
+
+            - text: "Perfil da Vegetação"
+              href: perfil.qmd
+
+            - text: "Gráficos IVI"
+              href: ivi.qmd
+
+    - title: "Criptógamas"
+      contents:
+        - cripto.qmd
+        - section: "Trabalhos"
+          contents:
+            - text: "Ecologia de Briófitas"
+              href: cripto2.qmd
+
+            - text: "Pteridófitas"
+              href: cripto1.qmd
+              
+        - section: "Análises dos Dados"
+          contents:
+            - text: "Identificação das Briófitas"
+              href: identbri.qmd
+
+            - text: "Excel"
+              href: criexcel.qmd
+
+            - text: "Past"
+              href: past.qmd
+              
+            - text: "Amado"
+              href: amado.qmd
+
+        - "---"
+        - text: "🔙 Voltar"
+          href: invent.qmd
+format:
+  html:
+    toc: true
+    include-in-header:
+      text: |
+        <link rel="canonical" href="https://rkersten.netlify.app/" />

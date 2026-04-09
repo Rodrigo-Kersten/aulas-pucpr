@@ -1,39 +1,40 @@
 ---
 title: "Rodrigo de Andrade Kersten"
 subtitle: "Ecologia Comunidades Vegetais"
+image: "https://rkersten.netlify.app/imagerak.webp"
 format:
   html:
     sidebar: false 
     filters: [academicons]
 about:
   template: solana
-  image: profile.jpg
+  image: profile.webp
   links:
-    - icon: ai-orcid
-      text: ORCID
-      href: https://orcid.org/0000-0003-1953-8516
-    
-    - icon: book
-      text: Google Scholar
-      href: https://scholar.google.com.br/citations?hl=pt-BR&pli=1&user=8OwfqwgAAAAJ
-    
-    - icon: file-person
-      text: Lattes
-      href: https://lattes.cnpq.br/2127883418769406     
-      
     - icon: github
-      text: github
-      href: https://github.com/Rodrigo-Kersten
+      text: GitHub
+      href: https://github.com/Rodrigo-Kersten  
+    
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: https://scholar.google.com.br/citations?hl=pt-BR&pli=1&user=8OwfqwgAAAAJ  
+    
+    - text: '<img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" width="15" height="15" alt="GS" style="vertical-align: middle; margin-right: 4px;"> Orcid'
+      href: https://orcid.org/0000-0003-1953-8516  
+    
+    - text: '<img src="https://ppghp.unespar.edu.br/imagens/plataforma-lattes-logo.jpg" width="15" height="15" alt="GS" style="vertical-align: middle; margin-right: 4px;"> Lattes'
+      href: https://lattes.cnpq.br/2127883418769406  
 ---
 
 ::: {#hero-heading}
-Biólogo, Professor de Botânica e áreas correlatas
+Biólogo, Professor de Botânica e Ecologia Vegetal
 
-![](puc.png){width="30" height="35"} [Pontifícia Universidade Católica do Paraná](https://www.pucpr.br/)
+![](puc.webp){fig-align="left" width="26"} [PUCPR](https://www.pucpr.br/){target="_blank" rel="noopener noreferrer"} • ![](sbb.webp){fig-align="left" width="26" height="30"} [Sociedade Botânica do Brasil](https://www.botanica.org.br/){target="_blank" rel="noopener noreferrer"} • [![](tax.webp){width="79"}](https://www.taxonline.bio.br/){target="_blank" rel="noopener noreferrer"}
 
 ## Formação
 
-Universidade Federal do Paraná, Curitiba \| Paraná, BR
+Bacharel e Liceciado em Ciências Biológicas
+
+Ms. Botânica - Ecologia Vegetal
 
 Dr. Conservação da Natureza (Engenharia Florestal)
 
@@ -41,7 +42,7 @@ Dr. Conservação da Natureza (Engenharia Florestal)
 
 Professor \| Botânica \| 2002 - presente
 
-Curador do [Herbário HUCP](https://www.pucpr.br/escola-de-medicina-e-ciencias-da-vida/herbario/) \| 2018 - Presente ![](hucp.png){width="40"}
+Curador do [Herbário HUCP](https://www.pucpr.br/escola-de-medicina-e-ciencias-da-vida/herbario/){target="_blank" rel="noopener noreferrer"} \| 2018 - Presente ![](hucp.webp){width="40"}
 
 Consulturia Ambiental \| EIA-RIMA, Restauração, RAS, Inventário, Pareceres Técnicos \| 1998 - presente
 
@@ -63,7 +64,21 @@ Coordenador \| Comissão de Ecologia Vegetal da Sociedade Brasileira de Botânic
 
 ## Atividade e Arquivos das aulas
 
-Vocês também podem acessar as atividades e o conteúdo direto pelo [Ambiente Virtual de Aprendizagem](https://www.pucpr.br/ava)
+Enquanto estão cursando, vocês também podem acessar as atividades e o conteúdo direto pelo [Ambiente Virtual de Aprendizagem](https://www.pucpr.br/ava){target="_blank" rel="noopener noreferrer"}
 
-![](AVA.png){width="120"}
+![](AVA.webp){width="120"}
+:::
+
+------------------------------------------------------------------------
+
+::: {style="text-align: center; margin-top: 3em; padding-top: 1em; border-top: 1px solid #dee2e6;"}
+<a href="https://quarto.org" target="_blank" style="text-decoration: none;"> <img src="quarto.webp" alt="Feito com Quarto" style="height: 40px; opacity: 0.8; transition: opacity 0.2s;"/> </a>
+
+<p style="margin-top: 0.5em; color: #6c757d; font-size: 0.9em;">
+
+Site desenvolvido com Quarto • RStudio
+
+Prof. Rodrigo Kersten • PUCPR
+
+</p>
 :::

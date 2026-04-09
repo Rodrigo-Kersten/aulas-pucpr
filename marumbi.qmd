@@ -1,0 +1,18 @@
+---
+title: "Marumbi"
+format:
+  html:
+    sidebar: false
+---
+
+## Fotos das Aulas de Campo no Marumbi - Formandos Biologia PUCPR
+
+![](marumbi.webp){fig-align="center" width="500"}
+
+### Ano de 2024
+
+[![](icofoto.webp){width="50"}](https://mega.nz/folder/KzoDyJia#diHdseoEGec1m1InYccG9A){target="_blank" rel="noopener noreferrer"}
+
+### Ano de 2025
+
+[![](icofoto.webp){width="50"}](https://mega.nz/folder/LvRWjCzT#HD3WZ8GVASDn6rf45UAlfQ){target="_blank" rel="noopener noreferrer"}

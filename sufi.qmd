@@ -1,0 +1,128 @@
+---
+title: "Suficiência Florística"
+description: "Calculado a Suficiencia Amostral em inventários florestais"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+## Suficiência Amostral Florística
+
+A suficiência amostral avalia se um percentual adequado das espécies foi amostrada. Para isso, são utilizados alguns estimadores da riqueza real. Estes parâmtros avaliam, com base nas quantida de espécies raras (com uma, duas ou três ocorrência) qual deve ser a riqueza total da comunidade. Com este parâmetro, calcula o percentual da riqueza observado.
+
+***Suficiencia***
+
+Considera-se que a suficiência amostral foi atingida se 85% das espécies estimada foram amostras no levantamento
+
+***Carregar os dados*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(readxl)
+library(writexl)
+setwd("C:/Inventario") 
+dados <- read_excel("Restinga.xlsx")
+
+```
+
+***Carregar pacotes necessários para esta análise*** (se ainda não estão carregados)
+
+```{r eval=FALSE}
+library(vegan)
+
+```
+
+***Cácular a Suficiencia***
+
+```{r eval=FALSE}
+matriz_freq <- xtabs(~ Parcela + Especie, data = dados)
+
+estimadores <- specpool(matriz_freq)
+print(estimadores)
+
+
+```
+
+Algo assim tem que ter saído
+
+------------------------------------------------------------------------
+
+**Species chao chao.se jack1 jack1.se jack2 boot boot.se N**
+
+**All 57 71.87179 8.724617 76.33333 5.503534 83.28506 66.20656 3.323602 30**
+
+------------------------------------------------------------------------
+
+Se deu certo, vamos para frente
+
+```{r eval=FALSE}
+obs_val <- as.numeric(estimadores[1, 1])    # Column 1 = Species (S)
+chao_val <- as.numeric(estimadores[1, 2])   # Column 2 = chao
+jack1_val <- as.numeric(estimadores[1, 4])  # Column 4 = jack1
+jack2_val <- as.numeric(estimadores[1, 6])  # Column 6 = jack2
+boot_val <- as.numeric(estimadores[1, 8])   # Column 8 = boot
+
+cat("\n=== Verificação dos Valores ===\n")
+cat("obs_val:", obs_val, "- Tipo:", class(obs_val), "- Tamanho:", length(obs_val), "\n")
+cat("chao_val:", chao_val, "- Tipo:", class(chao_val), "- Tamanho:", length(chao_val), "\n")
+
+eh_valido <- function(x) {
+  !is.null(x) && length(x) > 0 && !is.na(x) && is.finite(x)
+}
+
+if(eh_valido(chao_val)) {
+  estimador_val <- chao_val
+  estimador_nome <- "Chao1"
+} else if(eh_valido(jack1_val)) {
+  estimador_val <- jack1_val
+  estimador_nome <- "Jackknife 1"
+} else if(eh_valido(jack2_val)) {
+  estimador_val <- jack2_val
+  estimador_nome <- "Jackknife 2"
+} else if(eh_valido(boot_val)) {
+  estimador_val <- boot_val
+  estimador_nome <- "Bootstrap"
+} else {
+  estimador_val <- obs_val
+  estimador_nome <- "Nenhum estimador válido"
+}
+
+cat("\n=== Antes do Cálculo ===\n")
+cat("estimador_val:", estimador_val, "\n")
+cat("obs_val:", obs_val, "\n")
+
+if(eh_valido(estimador_val) && eh_valido(obs_val)) {
+  cat("\n=== Resultados Finais ===\n")
+  cat("Riqueza Observada:", obs_val, "\n")
+  cat("Estimador Selecionado:", estimador_nome, "=", round(estimador_val, 2), "\n")
+  
+  if(estimador_val > obs_val) {
+    suficiencia <- round(obs_val / estimador_val * 100, 1)
+    cat("Suficiência Amostral:", suficiencia, "%\n")
+    
+    if(suficiencia >= 85) {
+      cat("✓ Amostragem ADEQUADA\n")
+    } else if(suficiencia >= 70) {
+      cat("⚠ Amostragem MODERADA (recomenda-se mais parcelas)\n")
+    } else {
+      cat("✗ Amostragem INSUFICIENTE (adicione mais parcelas)\n")
+    }
+  } else {
+    cat("⚠ Estimador igual ao observado - não foi possível calcular suficiência\n")
+  }
+} else {
+  cat("\n❌ ERRO: Não foi possível extrair os valores dos estimadores\n")
+  cat("Verifique se a matriz_freq tem dados válidos\n")
+}
+
+
+```
+

@@ -1,0 +1,28 @@
+---
+title: "Análises no AMADO"
+description: "Criando os Gráficos no AMADO"
+author: "Rodrigo Kersten"
+categories: [Excel, tutorial, data-science]
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+### Sobre o AMADO
+
+Amado é a sigla para "Análise gráfica de uma matriz de Dados".
+
+Foi desenvolvido para analisa matrizes de dados (binárias, contagens, ou medidas) seguindo as ideias propostas por Jacques **BERTIN** (Bertin 1967, 1973, 1999 e Bertin 1977).
+
+Apresenta gráficos de barras nos quais as áreas das barras são proporcionais aos valores que representam.
+
+As análises são realizadas diretamente on-line pelo site
+
+<https://app.ptm.huma-num.fr/amado/index.html>{target="_blank" rel="noopener noreferrer"}

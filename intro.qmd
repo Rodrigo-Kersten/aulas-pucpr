@@ -60,24 +60,14 @@ Estes comandos carregam teus dados para dentro do ambiente R e já pode trabalha
 
 ```{r eval=FALSE}
 
-dados \<- read.table("Barigui.txt", header=T)
+dados <- read.table("Barigui.txt", header=T)          # texto simples (.txt)
 
-dados \<- read.csv("Monica.csv", header= TRUE)
+dados <- read.csv("Monica.csv", header= TRUE)         # texto .csv
 
-dados \<- read_excel("Restinga.xlsx")
+dados <- read_excel("Restinga.xlsx")                  # excel simples
 
-dados \<- read_excel("Palmito.xlsx", sheet = "Seca")
+dados <- read_excel("Palmito.xlsx", sheet = "Seca")   # com várias planilhas
 ```
-
-utilize cada linha para o arquivo correspondente:
-
-\- texto simples (.txt)
-
-\- texto separado por vírgulas (.csv)
-
-\- arquivo do excel (.xlsx) com apenas uma pasta de trabalho
-
-\- arquivo do excel com várias pastas de trabalho (.xlsx, sheet = "nome")
 
 Em todos os casos "dados" passa a ser o nome do conjunto dos teus dados.
 
@@ -91,31 +81,31 @@ Vocês podem escolher qualquer nome, basta depois trocar também quando forem ro
 
 ```{r eval=FALSE}
 
-dados (ou o outro nome que deram ao dados)  - exibe toda sua tabela de dados
+dados (ou o outro nome que deram ao dados)  # exibe toda sua tabela de dados
 
-head(dados)                                 - exibe as primeiras linhas
+head(dados)                                 # exibe as primeiras linhas
 
-str(dados)                                  - exibe os dados por página
+str(dados)                                  # exibe os dados por página
 
-tail(dados)                                 - exibe as últimas linhas
+tail(dados)                                 # exibe as últimas linhas
 
-str(dados\$PAP)                             - exibe apenas a culuna "PAP"
-
-
-
-mean(dados\$PAP)                            - Cálcula a média do "PAP"
-
-sum(dados\$PAP)                             - Soma do "PAP"
+str(dados\$PAP)                             # exibe apenas a culuna "PAP"
 
 
-class(dados\$PAP)                           - indica que tipo de dado tem na culuna
 
-Os principais tipos de dados são "numéricos" ou "caracteres", dados numericos podem ser utilizados em cálculos, dados do tipo caracter é tratado como texto e não entram diretametem em operações matemáticas.
+mean(dados\$PAP)                            # Cálcula a média do "PAP"
 
-Caso seja necessário corrigir o tipo de dados:
+sum(dados\$PAP)                             # Soma do "PAP"
+
+
+class(dados\$PAP)                           # indica que tipo de dado tem na culuna
+
+# Os principais tipos de dados são "numéricos" ou "caracteres", dados   numericos podem ser utilizados em cálculos, dado do tipo caracter é tratado como texto e não entra diretamente em operações matemáticas.
+
+# Caso seja necessário corrigir o tipo de dado:
   
-dados\$Ind \<- as.character(dados\$Ind)     - muda o tipo para caractere
-dados\$Ind \<- as.numeric(dados\$Ind)       - muda o tipo para numérico
+dados\$Ind \<- as.character(dados\$Ind)     # muda o tipo para caractere
+dados\$Ind \<- as.numeric(dados\$Ind)       # muda o tipo para numérico
 ```
 
 ### Renomear
@@ -123,7 +113,7 @@ dados\$Ind \<- as.numeric(dados\$Ind)       - muda o tipo para numérico
 ***O conjunto todo de dados***
 
 ```{r eval=FALSE}
-barigui \<- dados
+barigui <- dados
 ```
 
 sendo nome.novo \<- nome.antigo
@@ -133,14 +123,14 @@ seu conjunto de dados agora se chama barigui
 ***Apenas uma coluna (variável)***
 
 ```{r eval=FALSE}
-names(dados)\[names(dados) == "Alt"\] \<- "altura"
+names(dados)[names(dados) == "Parc"] <- "Parcela"
 ```
 
 sendo
 
--   Alt = nome antigo
+-   Parc = nome antigo
 
--   altura = nome novo
+-   Parcela = nome novo
 
 ------------------------------------------------------------------------
 
@@ -152,7 +142,7 @@ sendo
 write_xlsx(fito, "result.xlsx")
 ```
 
-assim como "dados" são os dados originais "fito" é o objeto (resultado) calculado pelo programa result.xlsx é o nome do arquivo final em excel, vocês podem trocar por qualquer nome, basta manter .xlsx ao final
+assim como "dados" são os dados originais "fito" é o objeto (resultado) calculado pelo programa; result.xlsx é o nome do arquivo final em excel, vocês podem trocar por qualquer nome, basta manter .xlsx ao final
 
 ------------------------------------------------------------------------
 
@@ -177,10 +167,9 @@ install.packages("kableExtra")
 install.packages("ggforce")
 install.packages("ggrepel")
 ```
+
 copiem e colem todos eles no R
-
-
 
 ### Para aprender um pouco mais sobre o R
 
-Se você deseja aprender um pouco mais sobre o R acesse o seguinte curso <https://bookdown.org/eugeniadoria/CursoMQ/>
+Se você deseja aprender um pouco mais sobre o R acesse o seguinte curso <https://bookdown.org/eugeniadoria/CursoMQ/>{target="_blank" rel="noopener noreferrer"}

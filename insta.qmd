@@ -1,16 +1,19 @@
 ---
 title: "Instalando o R"
+description: "Instalando o R"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
 format: html
 editor: visual
 ---
 
 ***Instalar o R***
 
-<https://cran-r.c3sl.ufpr.br/>
+<https://cran-r.c3sl.ufpr.br/>{target="\_blank" rel="noopener noreferrer"}
 
-![](R1.png){width="800"}
+![](R1.webp){fig-align="center" width="500"}
 
-![](r2.png){width="700"}
+![](r2.webp){fig-align="center" width="600"}
 
 **ANTES DE MAIS NADA**
 

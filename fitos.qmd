@@ -1,5 +1,8 @@
 ---
 title: "Fitossociologia"
+description: "Manual para cáculos fitossociológicos em R"
+author: "Rodrigo Kersten"
+categories: [R, tutorial, data-science]
 format:
   html:
     theme: 
@@ -16,7 +19,7 @@ editor: visual
 
 Fitossociologia é o ramo da Ecologia Vegetal que estuda, de forma qualitativa e quantitativa, a composição, estrutura, dinâmica, distribuição e relações ambientais das comunidades vegetais, especialmente florestais. Ela se destaca por aplicar métodos numéricos para analisar espécies vegetais em unidades amostrais, como parcelas ou pontos quadrantes, permitindo o cálculo de parâmetros como densidade, dominância, frequência e valor de importância.
 
-![](parc.jpg){fig-align="center" width="300"}
+![](parc.webp){fig-align="center" width="300"}
 
 ------------------------------------------------------------------------
 
@@ -47,7 +50,7 @@ dados <- read_excel("Restinga.xlsx")
 ***Indicar o tamanho da unidade amostral (ua)***
 
 ```{r eval=FALSE}
-area_ua <- 100            - em métros quadrados
+area_ua <- 100            # em métros quadrados
 ```
 
 ***Calcular os parâmetros Fitossociológicos***
@@ -99,7 +102,6 @@ write_xlsx(tabela_fito, "Fitossociologia.xlsx")
 ```
 
 obs: podem utilizar o nome de sua preferência para a tabela do excel
-
 
 ------------------------------------------------------------------------
 

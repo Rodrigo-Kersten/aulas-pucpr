@@ -1,0 +1,30 @@
+---
+title: "Análises no PAST"
+description: "Análises de Biodiversidade no PAST"
+author: "Rodrigo Kersten"
+categories: [Excel, tutorial, data-science]
+format:
+  html:
+    theme: 
+      light: cosmo          
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+editor: visual
+---
+
+### O PAST
+
+PAST é um software gratuito e de fácil utilização voltado para análise estatística e científica de dados, especialmente em áreas como ecologia, paleontologia e ciências da Terra desenvolvido pelo Museu de História Natural de Oslo.
+
+Tem como vantagens ser Gratuito e leve, com interface amigável sem perder as funcionalidades avançadas.
+
+Essas características tornam o PAST uma alternativa poderosa e eficiente para análise de dados científicos, especialmente em contextos educacionais.
+
+### Instalando o PAST
+
+[PAST](https://www.nhm.uio.no/english/research/resources/past){target="_blank" rel="noopener noreferrer"}
+
+Podem Baixar a versão 4.17 que nem precisa instalar e já funciona 100% (mas tambem podem baixar a última versão, não tem muita diferença)

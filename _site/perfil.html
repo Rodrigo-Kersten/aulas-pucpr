@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rodrigo Kersten">
+<meta name="description" content="Tutorial simplificado para criação de perfil de vegatação para inventários florestais">
 
 <title>Perfil da Vegetação – Rodrigo Kersten</title>
 <style>
@@ -65,6 +67,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./ivi.html" rel="next">
+<link href="./fitos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -103,11 +107,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="canonical" href="https://rkersten.netlify.app/">
 
 
+<meta property="og:title" content="Perfil da Vegetação – Rodrigo Kersten">
+<meta property="og:description" content="Tutorial simplificado para criação de perfil de vegatação para inventários florestais">
+<meta property="og:image" content="https://rkersten.netlify.app/perfil.webp">
+<meta property="og:site_name" content="Rodrigo Kersten">
+<meta name="twitter:title" content="Perfil da Vegetação – Rodrigo Kersten">
+<meta name="twitter:description" content="Tutorial simplificado para criação de perfil de vegatação para inventários florestais">
+<meta name="twitter:image" content="https://rkersten.netlify.app/perfil.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Algas&amp;Fungos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./brio.html"> <i class="bi bi-incognito" role="img">
+    <a class="nav-link" href="./cripto.html"> <i class="bi bi-incognito" role="img">
 </i> 
 <span class="menu-text">Criptógamas</span></a>
   </li>  
@@ -156,6 +169,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </i> 
 <span class="menu-text">Restauração</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ident.html"> <i class="bi bi-archive" role="img">
+</i> 
+<span class="menu-text">Identificação Botânica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./marumbi.html"> <i class="bi bi-camera" role="img">
+</i> 
+<span class="menu-text">Marumbi</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -167,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfi da Vegetação</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acumula.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfil da Vegetação</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -183,6 +206,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inventário e Avaliação da Biodiversidade Vegetal</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -234,20 +263,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dendrograma</span></a>
+  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curva de Acumulação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Acumulação</span></a>
+  <a href="./sufi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suficiência Amostral</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./diversidade.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Índices de Diversidade</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dendrograma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./perfil.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Perfi da Vegetação</span></a>
+ <span class="menu-text">Perfil da Vegetação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,31 +305,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./invent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔙 Voltar</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#perfil-da-vegetação" id="toc-perfil-da-vegetação" class="nav-link active" data-scroll-target="#perfil-da-vegetação">Perfil da Vegetação</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dendro.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfi da Vegetação</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acumula.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./perfil.html">Perfil da Vegetação</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Perfil da Vegetação</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">tutorial</div>
+    <div class="quarto-category">data-science</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Tutorial simplificado para criação de perfil de vegatação para inventários florestais
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rodrigo Kersten </p>
+          </div>
+  </div>
     
   
     
@@ -310,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Perfil de vegetação é uma imagem que mostra a estrutura vertical e horizontal de uma formação vegetal. Baseada no levantamento fitossociológico ela destaca os diferentes estratos de uma floresta e suas principais espécies. É utilizado para auxiliar na descrição de uma comunidade vegetal.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="perfil.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+<p><img src="perfil.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
 </figure>
 </div>
 <hr>
@@ -496,7 +548,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -823,6 +875,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./fitos.html" class="pagination-link" aria-label="Fitossociologia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Fitossociologia</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ivi.html" class="pagination-link" aria-label="Gráficos IVI">
+        <span class="nav-page-text">Gráficos IVI</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

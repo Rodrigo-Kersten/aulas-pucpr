@@ -1,5 +1,8 @@
 ---
 title: "Análises em excel"
+description: "Montando e verificando os dados nas planilhas excel para inventário florestal"
+author: "Rodrigo Kersten"
+categories: [Excel, tutorial, data-science]
 format:
   html:
     theme: 
@@ -12,8 +15,23 @@ format:
 editor: visual
 ---
 
+### 1 - Análise dos Parâmetros de Estágios Sucessionais
+
+Utilizando a seguinte Planilha do Excel **Planilha para gráfico da distribuição de DAP, PAP e Altura**
+
+[DAP](files\dap.xlsx){target="_blank" rel="noopener noreferrer"}
+
+Digitem os dados de PAP (perímetro - em cm) e Altura (em m) nas colunas em branco
+
+![](papdap.webp){width="500"}
+
+------------------------------------------------------------------------
+
+### 2 - Analise dos Dados coletados na fitossociologia
+
 Digitem os dados coletados em campo em uma planilha do Excel com a seguinte Estrutura:
 
+::: callout
 Coluna A: Parcela
 
 Coluna B: Especie =\> (Sem acento)
@@ -23,13 +41,18 @@ Coluna C: PAP =\> (em cm)
 Coluna D: Alt =\> (altura, em metros)
 
 Coluna E: Posicao =\> sem acento nem sinal cedilha
+:::
 
-![](parcela.png){width="500"}
+Como neste Exemplo
 
-**Planilha para os cálculos de Volume e Suficiência**
+![](parcela.webp){width="500"}
 
-[Volume](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\vol.xlsx)
+COPIEM OS SEGUINTES ARQUIVOS E INCLUAM SEUS DADOS NELES
 
-**Planilha para gráfico da distribuição de DAP, PAP e Altura**
+**Planilha para os cálculos Volume por parcela e por espécie**
 
-[DAP](C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\dap.xlsx)
+[Suficiência](files/vol.xlsx){target="_blank" rel="noopener noreferrer"}
+
+**Planilha para os cálculos de Suficiência amostral por Volume**
+
+[Volume](files/sufi.xlsx){target="_blank" rel="noopener noreferrer"}

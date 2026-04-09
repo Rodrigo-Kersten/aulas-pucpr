@@ -1,0 +1,29 @@
+---
+title: "Criptógamas"
+description: "Diversidade, evolução e Morfologia de Briófitas e Pteridófitas, musgos, hepáticas, antóceros, licófitas, monilófitas. Material didático da PUCPR"
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Criptógamas]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+## Biodiversidade de Briófitas e Pteridófitas
+
+É uma disciplina teórico-prática do 3º período do Curso de Ciências Biológicas. Nela os estudantes integram conhecimentos referentes à estrutura de comunidades e ecossistemas, analisando o ramos evolutivo das plantas terrestres, com ênfase em briófitas e pteridófitas. Ao final, são capazes de reconhecer os táxons envolvidos, suas relações evolutivas, interações ambientais e importância econômico-social.
+
+![](cripto.webp){fig-align="center" width="400"}
+
+### Atividades - Trabalhos
+
+Ao longo do sementre vocês vão realizar dois projetos de pesquisa nos moldes de atividades desenvolvidas profissionalmente por biólogos em campo. Uma sobre ***ecologia de briófitas*** que envolve a produção de um pequeno artigo cietífico (nota científica) e outro sobre ***inventário florístico*** de pteridófitas, que envolve a produção de uma coleção com os indivíduos indentificados até gênero.
+
+![](bar1.webp){fig-align="center" width="800"}
+
+[**1 - Nota Científica Sobre Ecologia de Briófias**](cripto2.qmd)
+
+[**2 - Inventário florístico de Pteridófitas**](cripto1.qmd)

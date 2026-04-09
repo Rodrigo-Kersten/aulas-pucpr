@@ -1,0 +1,49 @@
+---
+title: "Substancias de Algas"
+description: "Algas, Carragena, Agar, Alginato, Alimentos. Material didático da PUCPR"
+author: "Rodrigo Kersten"
+categories: [Botânica, Algas, Alimentos]
+format:
+  html:
+    sidebar: false
+    code-copy: true
+    code-tools: true
+---
+
+## Substancias extraídas de algas marinhas
+
+Trabalho em equipes de 3 ou 4 discentes
+
+em equipes maiores a nota será proporcionalmente reduzida
+
+Pesquisar sobre substâncias extraídas de Feófitas (algas pardas) e Rodófitas (algas vermelhas).
+
+::: callout
+Apresentar um texto escrito com referências bibliográficas
+
+1.  De que grupos de algas são extraídos Agar, Carragena (= carragenana/carragenina) e Alginato?
+
+2.  Quais são os códigos de referência alimentar para eles (INS: International Numbering System for Food Additives)?
+
+3.  Quais os maiores produtores de algas de cada um dos três produtos?
+
+4.  Quais as espécies mais utilizadas para extração?
+
+5.  Como são produzidas as algas?
+:::
+
+Trazer 10 embalagens de produtos que contenham derivados de algas em sua composição considerando:
+
+::: callout
+1.  Agar (ao menos 1 embalagem)
+
+2.  Carragenana (Carragena, Carragenina) - (ao menos 3 embalagens)
+
+3.  Alginato (ao menos 3 embalagens)
+
+4.  Outros derivados de algas
+
+-   Assinalar na embalagem a substância
+
+-   ATENÇÃO: Embalagens sem os componetes assinalados não serão consideradas
+:::
