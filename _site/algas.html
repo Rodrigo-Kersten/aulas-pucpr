@@ -75,11 +75,11 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Algas &amp; Fungos – Rodrigo Kersten">
 <meta property="og:description" content="Diversidade, evolução e Morfologia de Algas e Fungos, Cianobacterias, Euglenidios, Dinoflagelados, Estramenópilos, Archaeplastida. Material didático da PUCPR.">
-<meta property="og:image" content="https://rkersten.netlify.app/alga-fungo.webp">
+<meta property="og:image" content="alga-fungo.webp">
 <meta property="og:site_name" content="Rodrigo Kersten">
 <meta name="twitter:title" content="Algas &amp; Fungos – Rodrigo Kersten">
 <meta name="twitter:description" content="Diversidade, evolução e Morfologia de Algas e Fungos, Cianobacterias, Euglenidios, Dinoflagelados, Estramenópilos, Archaeplastida. Material didático da PUCPR.">
-<meta name="twitter:image" content="https://rkersten.netlify.app/alga-fungo.webp">
+<meta name="twitter:image" content="alga-fungo.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

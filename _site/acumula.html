@@ -110,11 +110,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Curva de Rarefação de Espécies – Rodrigo Kersten">
 <meta property="og:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
-<meta property="og:image" content="https://rkersten.netlify.app/rarefacao.webp">
+<meta property="og:image" content="rarefacao.webp">
 <meta property="og:site_name" content="Rodrigo Kersten">
 <meta name="twitter:title" content="Curva de Rarefação de Espécies – Rodrigo Kersten">
 <meta name="twitter:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
-<meta name="twitter:image" content="https://rkersten.netlify.app/rarefacao.webp">
+<meta name="twitter:image" content="rarefacao.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -468,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

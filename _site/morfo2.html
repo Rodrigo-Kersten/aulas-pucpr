@@ -110,11 +110,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Dendrocronologia – Rodrigo Kersten">
 <meta property="og:description" content="Anatomia vegetal, morfologia vegetal, Dendrocronologia">
-<meta property="og:image" content="https://rkersten.netlify.app/dendroc.webp">
+<meta property="og:image" content="dendroc.webp">
 <meta property="og:site_name" content="Rodrigo Kersten">
 <meta name="twitter:title" content="Dendrocronologia – Rodrigo Kersten">
 <meta name="twitter:description" content="Anatomia vegetal, morfologia vegetal, Dendrocronologia">
-<meta name="twitter:image" content="https://rkersten.netlify.app/dendroc.webp">
+<meta name="twitter:image" content="dendroc.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -519,7 +519,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

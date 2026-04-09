@@ -112,11 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Perfil da Vegetação – Rodrigo Kersten">
 <meta property="og:description" content="Tutorial simplificado para criação de perfil de vegatação para inventários florestais">
-<meta property="og:image" content="https://rkersten.netlify.app/perfil.webp">
+<meta property="og:image" content="perfil.webp">
 <meta property="og:site_name" content="Rodrigo Kersten">
 <meta name="twitter:title" content="Perfil da Vegetação – Rodrigo Kersten">
 <meta name="twitter:description" content="Tutorial simplificado para criação de perfil de vegatação para inventários florestais">
-<meta name="twitter:image" content="https://rkersten.netlify.app/perfil.webp">
+<meta name="twitter:image" content="perfil.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -548,7 +548,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/rkersten\.netlify\.app");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
