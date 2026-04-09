@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./acumula.html" rel="next">
+<link href="./insta.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -103,11 +105,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="canonical" href="https://rkersten.netlify.app/">
 
 
+<meta property="og:title" content="NOÇÕES BÁSICAS DO AMBIENTE R – Rodrigo Kersten">
+<meta property="og:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
+<meta property="og:image" content="https://rkersten.netlify.app/imagerak.webp">
+<meta property="og:site_name" content="Rodrigo Kersten">
+<meta name="twitter:title" content="NOÇÕES BÁSICAS DO AMBIENTE R – Rodrigo Kersten">
+<meta name="twitter:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
+<meta name="twitter:image" content="https://rkersten.netlify.app/imagerak.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Algas&amp;Fungos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./brio.html"> <i class="bi bi-incognito" role="img">
+    <a class="nav-link" href="./cripto.html"> <i class="bi bi-incognito" role="img">
 </i> 
 <span class="menu-text">Criptógamas</span></a>
   </li>  
@@ -155,6 +166,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./restaura.html"> <i class="bi bi-image-alt" role="img">
 </i> 
 <span class="menu-text">Restauração</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ident.html"> <i class="bi bi-archive" role="img">
+</i> 
+<span class="menu-text">Identificação Botânica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./marumbi.html"> <i class="bi bi-camera" role="img">
+</i> 
+<span class="menu-text">Marumbi</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -183,6 +204,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inventário e Avaliação da Biodiversidade Vegetal</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -234,25 +261,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./acumula.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curva de Acumulação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sufi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suficiência Amostral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diversidade.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de Diversidade</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./dendro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dendrograma</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./invent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">🔙 Voltar</span></a>
+  <a href="./fitos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitossociologia</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perfil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Perfil da Vegetação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ivi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficos IVI</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ensinando-o-r-a-funcionar" id="toc-ensinando-o-r-a-funcionar" class="nav-link active" data-scroll-target="#ensinando-o-r-a-funcionar">ENSINANDO O R A FUNCIONAR</a></li>
+  <li><a href="#preparando-para-análise" id="toc-preparando-para-análise" class="nav-link" data-scroll-target="#preparando-para-análise">PREPARANDO PARA ANÁLISE</a>
+  <ul class="collapse">
+  <li><a href="#carregar-pacotes-já-instalados" id="toc-carregar-pacotes-já-instalados" class="nav-link" data-scroll-target="#carregar-pacotes-já-instalados">Carregar Pacotes já instalados</a></li>
+  <li><a href="#verificandoobservando-os-dados" id="toc-verificandoobservando-os-dados" class="nav-link" data-scroll-target="#verificandoobservando-os-dados">VERIFICANDO/OBSERVANDO OS DADOS</a></li>
+  <li><a href="#renomear" id="toc-renomear" class="nav-link" data-scroll-target="#renomear">Renomear</a></li>
+  <li><a href="#exportando-o-resultado-final-para-o-excel" id="toc-exportando-o-resultado-final-para-o-excel" class="nav-link" data-scroll-target="#exportando-o-resultado-final-para-o-excel">Exportando o resultado final para o Excel</a></li>
+  <li><a href="#limpar-a-memória-do-ambiente" id="toc-limpar-a-memória-do-ambiente" class="nav-link" data-scroll-target="#limpar-a-memória-do-ambiente">8 -&gt; Limpar a memória do ambiente</a></li>
+  </ul></li>
+  <li><a href="#pacotes-que-serão-utilizados-na-disciplina" id="toc-pacotes-que-serão-utilizados-na-disciplina" class="nav-link" data-scroll-target="#pacotes-que-serão-utilizados-na-disciplina">Pacotes que serão utilizados na disciplina</a>
+  <ul class="collapse">
+  <li><a href="#para-aprender-um-pouco-mais-sobre-o-r" id="toc-para-aprender-um-pouco-mais-sobre-o-r" class="nav-link" data-scroll-target="#para-aprender-um-pouco-mais-sobre-o-r">Para aprender um pouco mais sobre o R</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -306,19 +382,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong><em>Carregar dados</em></strong></p>
 <p>Estes comandos carregam teus dados para dentro do ambiente R e já pode trabalhar com eles. Antes sempre verifique o tipo de arquivo.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dados \<span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"Barigui.txt"</span>, <span class="at">header=</span>T)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"Barigui.txt"</span>, <span class="at">header=</span>T)          <span class="co"># texto simples (.txt)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dados \<span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Monica.csv"</span>, <span class="at">header=</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Monica.csv"</span>, <span class="at">header=</span> <span class="cn">TRUE</span>)         <span class="co"># texto .csv</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dados \<span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Restinga.xlsx"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Restinga.xlsx"</span>)                  <span class="co"># excel simples</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>dados \<span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Palmito.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Seca"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Palmito.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"Seca"</span>)   <span class="co"># com várias planilhas</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>utilize cada linha para o arquivo correspondente:</p>
-<p>- texto simples (.txt)</p>
-<p>- texto separado por vírgulas (.csv)</p>
-<p>- arquivo do excel (.xlsx) com apenas uma pasta de trabalho</p>
-<p>- arquivo do excel com várias pastas de trabalho (.xlsx, sheet = “nome”)</p>
 <p>Em todos os casos “dados” passa a ser o nome do conjunto dos teus dados.</p>
 <p>Sempre que formos utilizá-los vamos nos referir a ele assim. O R, chama isso de um “objeto”. o conjunto “dados” é um objeto dentro do ambiente</p>
 <p>Vocês podem escolher qualquer nome, basta depois trocar também quando forem rodar as análises que faremos</p>
@@ -327,49 +398,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="verificandoobservando-os-dados">VERIFICANDO/OBSERVANDO OS DADOS</h3>
 <p><strong><em>Observar os dados</em></strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dados</span> (ou o outro nome que deram ao dados)  <span class="sc">-</span> exibe toda sua tabela de dados</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dados</span> (ou o outro nome que deram ao dados)  <span class="co"># exibe toda sua tabela de dados</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dados)                                 <span class="sc">-</span> exibe as primeiras linhas</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dados)                                 <span class="co"># exibe as primeiras linhas</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dados)                                  <span class="sc">-</span> exibe os dados por página</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dados)                                  <span class="co"># exibe os dados por página</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dados)                                 <span class="sc">-</span> exibe as últimas linhas</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dados)                                 <span class="co"># exibe as últimas linhas</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dados\<span class="sc">$</span>PAP)                             <span class="sc">-</span> exibe apenas a culuna <span class="st">"PAP"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dados\<span class="sc">$</span>PAP)                             <span class="co"># exibe apenas a culuna "PAP"</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dados\<span class="sc">$</span>PAP)                            <span class="sc">-</span> Cálcula a média do <span class="st">"PAP"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dados\<span class="sc">$</span>PAP)                            <span class="co"># Cálcula a média do "PAP"</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dados\<span class="sc">$</span>PAP)                             <span class="sc">-</span> Soma do <span class="st">"PAP"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dados\<span class="sc">$</span>PAP)                             <span class="co"># Soma do "PAP"</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dados\<span class="sc">$</span>PAP)                           <span class="sc">-</span> indica que tipo de dado tem na culuna</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(dados\<span class="sc">$</span>PAP)                           <span class="co"># indica que tipo de dado tem na culuna</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>Os principais tipos de dados são <span class="st">"numéricos"</span> ou <span class="st">"caracteres"</span>, dados numericos podem ser utilizados em cálculos, dados do tipo caracter é tratado como texto e não entram diretametem em operações matemáticas.</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Os principais tipos de dados são "numéricos" ou "caracteres", dados   numericos podem ser utilizados em cálculos, dado do tipo caracter é tratado como texto e não entra diretamente em operações matemáticas.</span></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>Caso seja necessário corrigir o tipo de dados<span class="sc">:</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Caso seja necessário corrigir o tipo de dado:</span></span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>dados\<span class="sc">$</span>Ind \<span class="ot">&lt;-</span> <span class="fu">as.character</span>(dados\<span class="sc">$</span>Ind)     <span class="sc">-</span> muda o tipo para caractere</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>dados\<span class="sc">$</span>Ind \<span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(dados\<span class="sc">$</span>Ind)       <span class="sc">-</span> muda o tipo para numérico</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>dados\<span class="sc">$</span>Ind \<span class="ot">&lt;-</span> <span class="fu">as.character</span>(dados\<span class="sc">$</span>Ind)     <span class="co"># muda o tipo para caractere</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>dados\<span class="sc">$</span>Ind \<span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(dados\<span class="sc">$</span>Ind)       <span class="co"># muda o tipo para numérico</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="renomear" class="level3">
 <h3 class="anchored" data-anchor-id="renomear">Renomear</h3>
 <p><strong><em>O conjunto todo de dados</em></strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>barigui \<span class="ot">&lt;-</span> dados</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>barigui <span class="ot">&lt;-</span> dados</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>sendo nome.novo &lt;- nome.antigo</p>
 <p>seu conjunto de dados agora se chama barigui</p>
 <p><strong><em>Apenas uma coluna (variável)</em></strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dados)\[<span class="fu">names</span>(dados) <span class="sc">==</span> <span class="st">"Alt"</span>\] \<span class="ot">&lt;-</span> <span class="st">"altura"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dados)[<span class="fu">names</span>(dados) <span class="sc">==</span> <span class="st">"Parc"</span>] <span class="ot">&lt;-</span> <span class="st">"Parcela"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>sendo</p>
 <ul>
-<li><p>Alt = nome antigo</p></li>
-<li><p>altura = nome novo</p></li>
+<li><p>Parc = nome antigo</p></li>
+<li><p>Parcela = nome novo</p></li>
 </ul>
 <hr>
 </section>
@@ -379,13 +450,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_xlsx</span>(fito, <span class="st">"result.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>assim como “dados” são os dados originais “fito” é o objeto (resultado) calculado pelo programa result.xlsx é o nome do arquivo final em excel, vocês podem trocar por qualquer nome, basta manter .xlsx ao final</p>
+<p>assim como “dados” são os dados originais “fito” é o objeto (resultado) calculado pelo programa; result.xlsx é o nome do arquivo final em excel, vocês podem trocar por qualquer nome, basta manter .xlsx ao final</p>
 <hr>
 </section>
 <section id="limpar-a-memória-do-ambiente" class="level3">
 <h3 class="anchored" data-anchor-id="limpar-a-memória-do-ambiente">8 -&gt; Limpar a memória do ambiente</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>R <span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -407,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>copiem e colem todos eles no R</p>
 <section id="para-aprender-um-pouco-mais-sobre-o-r" class="level3">
 <h3 class="anchored" data-anchor-id="para-aprender-um-pouco-mais-sobre-o-r">Para aprender um pouco mais sobre o R</h3>
-<p>Se você deseja aprender um pouco mais sobre o R acesse o seguinte curso <a href="https://bookdown.org/eugeniadoria/CursoMQ/" class="uri">https://bookdown.org/eugeniadoria/CursoMQ/</a></p>
+<p>Se você deseja aprender um pouco mais sobre o R acesse o seguinte curso <a href="https://bookdown.org/eugeniadoria/CursoMQ/" target="_blank" rel="noopener noreferrer">https://bookdown.org/eugeniadoria/CursoMQ/</a></p>
 
 
 </section>
@@ -487,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Rodrigo-Kersten\.github\.io\/aulas-pucpr\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -814,6 +885,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./insta.html" class="pagination-link" aria-label="Instalando o R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Instalando o R</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./acumula.html" class="pagination-link" aria-label="Curva de Acumulação">
+        <span class="nav-page-text">Curva de Acumulação</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

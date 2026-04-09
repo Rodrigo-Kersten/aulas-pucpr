@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./sufi.html" rel="next">
+<link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -103,11 +105,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="canonical" href="https://rkersten.netlify.app/">
 
 
+<meta property="og:title" content="Curva de Rarefação de Espécies – Rodrigo Kersten">
+<meta property="og:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
+<meta property="og:image" content="https://Rodrigo-Kersten.github.io/aulas-pucpr/rarefacao.webp">
+<meta property="og:site_name" content="Rodrigo Kersten">
+<meta name="twitter:title" content="Curva de Rarefação de Espécies – Rodrigo Kersten">
+<meta name="twitter:description" content="Aulas e análises de dados em Botânica: inventário florestal, restauração ecológica, fitossociologia e diversidade vegetal com R e Quarto. Material didático da PUCPR.">
+<meta name="twitter:image" content="https://Rodrigo-Kersten.github.io/aulas-pucpr/rarefacao.webp">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Algas&amp;Fungos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./brio.html"> <i class="bi bi-incognito" role="img">
+    <a class="nav-link" href="./cripto.html"> <i class="bi bi-incognito" role="img">
 </i> 
 <span class="menu-text">Criptógamas</span></a>
   </li>  
@@ -147,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Fanerógamas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./invent.html"> <i class="bi bi-tree-fill" role="img">
+    <a class="nav-link active" href="./invent.html" aria-current="page"> <i class="bi bi-tree-fill" role="img">
 </i> 
 <span class="menu-text">Inventário</span></a>
   </li>  
@@ -156,22 +167,160 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </i> 
 <span class="menu-text">Restauração</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ident.html"> <i class="bi bi-archive" role="img">
+</i> 
+<span class="menu-text">Identificação Botânica</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./marumbi.html"> <i class="bi bi-camera" role="img">
+</i> 
+<span class="menu-text">Marumbi</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acumula.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./acumula.html">Curva de Acumulação</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./invent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inventário e Avaliação da Biodiversidade Vegetal</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Excel</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./excel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Análises em Excel</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Utilizando o R</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./insta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instalando o R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução ao R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Análises em R</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acumula.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Curva de Acumulação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sufi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suficiência Amostral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diversidade.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de Diversidade</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dendro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dendrograma</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fitos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fitossociologia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./perfil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Perfil da Vegetação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ivi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gráficos IVI</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#curva-de-rarefação-de-espécies" id="toc-curva-de-rarefação-de-espécies" class="nav-link active" data-scroll-target="#curva-de-rarefação-de-espécies">Curva de Rarefação de Espécies</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acumula.html">Análises em R</a></li><li class="breadcrumb-item"><a href="./acumula.html">Curva de Acumulação</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Curva de Rarefação de Espécies</h1>
 </div>
@@ -195,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A curva de rarefação é uma ferramenta estatística usada em ecologia para comparar a riqueza de espécies entre diferentes comunidades quando o esforço amostral (número de indivíduos coletados ou amostras realizadas) não é o mesmo. A análise calcula quantas espécies ocorrem (em média) em números crescentes de parcelas e constroi uma curva.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rarefacao.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+<p><img src="rarefacao.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
 </figure>
 </div>
 <p><strong><em>Carregar os dados</em></strong> (se ainda não estão carregados)</p>
@@ -205,32 +354,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Inventario"</span>) </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"Restinga.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong><em>Carregar pacotes necessários para esta análise</em></strong></p>
+<p><strong><em>Carregar pacotes necessários para esta análise</em></strong> (se ainda não estão carregados)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra) </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong><em>Cácular a Curva</em></strong></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>matriz_freq <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(<span class="sc">~</span>Parcela<span class="sc">+</span>Especie, dados)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>),<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>curva_acum <span class="ot">&lt;-</span> <span class="fu">specaccum</span>(matriz_freq)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(curva_acum, </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.type=</span><span class="st">"polygon"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.col=</span><span class="st">"lightskyblue1"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.lty =</span> <span class="dv">0</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">lwd=</span><span class="dv">2</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">lty=</span><span class="dv">2</span>,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Unidades amostrais"</span>,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">"Riqueza"</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Curva de acumulação de espécies"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>curva_acum <span class="ot">&lt;-</span> <span class="fu">specaccum</span>(matriz_freq)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotar a curva</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(curva_acum, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.type=</span><span class="st">"polygon"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.col=</span><span class="st">"lightskyblue1"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">ci.lty =</span> <span class="dv">0</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">lwd=</span><span class="dv">1</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">lty=</span><span class="dv">2</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Unidades amostrais"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">"Riqueza"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Curva de acumulação de espécies"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>(<span class="at">col =</span> <span class="st">"lightgray"</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <hr>
-<p>Se quiserem mudar a cor do gráfico é só trocar “lightskyblue1” Vejam os códigos de cores no <a href="C:\OneDrive%20-%20Grupo%20Marista\Documents\Aulas\R.Kersten_Aulas\ColorChart.pdf">ColorChart.pdf</a></p>
-<p>Para circundar a curva troquem o 0 por 1 em “ci.lty = 0” e rodem a análise novamente</p>
+<p><strong><em>Para mudar a cor</em></strong></p>
+<p>Para mudar a cor do gráfico é só trocar “lightskyblue1”, e plotar novamente</p>
+<p>As cores básicas em inglês (<span style="color: GREEN;"><strong>green</strong></span>, <span style="color: BLUE;"><strong>blue</strong></span>, <span style="color: RED;"><strong>red</strong></span>, <span style="color: ORANGE;"><strong>orange</strong></span>,<span style="color: YELLOW;"><strong>yellow</strong></span>, <span style="color: MAGENTA;"><strong>magenta</strong></span>) funcionam, mas tem uma infinidade de opções</p>
+<p>Vejam os códigos de cores no <a href="files\ColorChart.pdf" target="_blank" rel="noopener noreferrer">ColorChart.pdf</a></p>
+<p><strong><em>Outras Alterações no gráfico</em></strong></p>
+<ul>
+<li><p>Excluir a grade de fundo basta rodar sem a última linha (“grid(col=…”)</p></li>
+<li><p>Para circundar a curva com uma linha, troquem o 0 por 1 em “ci.lty = 0”</p></li>
+<li><p>A linha “lwd=1” controla a espessura do contorno</p></li>
+<li><p>A linha “lty=2” controla o pontinhado da linha central</p></li>
+</ul>
+<p><strong><em>Suficiência Amostral</em></strong></p>
+<p>A representatividade da amostragem é considerada adequada quando a curva atingir estabilização (parar de mudar significativamente o ângulo) ou quando a riqueza observada alcançar pelo menos 85% da riqueza estimada.</p>
 
 
 </section>
@@ -309,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Rodrigo-Kersten\.github\.io\/aulas-pucpr\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -636,6 +795,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introdução ao R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introdução ao R</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./sufi.html" class="pagination-link" aria-label="Suficiência Amostral">
+        <span class="nav-page-text">Suficiência Amostral</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
