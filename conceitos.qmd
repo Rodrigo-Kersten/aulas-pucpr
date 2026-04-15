@@ -1,0 +1,65 @@
+---
+title: "Conceitos"
+description: "Introdução a restauração florestal, métodos e legislação, aplicação, projeto. Material didático da PUCPR."
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Restauração ambiental]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+## A Evolução dos Conceitos de Restauração Ambiental
+
+Atividade em equipes
+
+Basear o conteúdo nas seguintes publicações:
+
+[Pacto Para a Restauração da Mata Atlântica](https://www.pactomataatlantica.org.br){target="_blank" rel="noopener noreferrer"}
+
+[Brancalion et al 2015 Restauração Florestal](https://mega.nz/file/Il0EFaiQ#VgjVLUwkI8uODxN89bMeqGj8JSOTg-DHfYSZrYepSA4){target="_blank" rel="noopener noreferrer"}
+
+Cada equipe deverá se preparar para falar (5-10 min) sobre uma fase de cada grupo
+
+### GRUPO DE TEMAS 1
+
+**Fase 1**
+
+-   Pacto: Restauração fundamentada no plantio de árvores, sem critérios ecológicos para a escolha e combinação das espécies
+
+-   Brancalion: Fase 1: Plantio de árvores sem critérios ecológicos para a escolha e combinação das espécies no campo
+
+**Fase 2**
+
+-   Pacto: Plantio de árvores nativas brasileiras fundamentada na sucessão florestal
+
+-   Brancalion: Plantio de árvores nativas brasileiras fundamentado na sucessão floresta
+
+**Fase 3**
+
+-   Pacto: Restauração baseada na sucessão determinística, buscando reproduzir uma floresta definida como modelo
+
+-   Brancalion: Restauração florestal baseada na cópia florística e estrutural e nos processos sucessionais de florestas remanescentes bem conservadas da região
+
+**Fase 4**
+
+-   Pacto: Abandono da cópia de um modelo de floresta madura e foco na restauração dos processos ecológicos responsáveis pela re-construção de uma floresta (fase atual)
+
+-   Brancalion: Foco na restauração dos processos ecológicos formadores e mantenedores de florestas tropicais
+
+**Fase 5** - Brancalion: Modelos de restauração voltados para a redução de custos e a geração de renda
+
+### GRUPO DE TEMAS 2 - Desafios da Restauração
+
+(Todos do Pacto Mata Atântica)
+
+-   Incorporação do conceito da diversidade genética na restauração ecológica
+
+-   Inserção de outras formas de vida no processo de restauração
+
+-   Inserção do conceito de grupos funcionais na restauração, baseada no conhecimento da biologia das espécies
+
+-   Uma visão ecossistêmica do processo de restauração ecológica

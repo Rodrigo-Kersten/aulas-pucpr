@@ -1,0 +1,53 @@
+---
+title: "Código Florestal"
+description: "Introdução a restauração florestal, métodos e legislação, aplicação, projeto. Material didático da PUCPR."
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Restauração ambiental]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+## Por quê restaurar?
+
+[The Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)](https://www.ipbes.net/about){target="_blank" rel="noopener noreferrer"}
+
+[IPBES 2018 Restoration.pdf](https://mega.nz/file/0w12xRgY#LVytwGVIQX8yoL2nf1eizoGwikzzOURB3D--7Bz21EQ){target="_blank" rel="noopener noreferrer"}
+
+[The assessment report on LAND DEGRADATION AND RESTORATION](https://www.ipbes.net/sites/default/files/spm_3bi_ldr_digital.pdf){target="_blank" rel="noopener noreferrer"}
+
+-   KEY MESSAGES (p10)
+
+[Mundacas climaticas.pdf](pactomataatlantica.org.br){target="_blank" rel="noopener noreferrer"}
+
+-   Benefícios da restauração de paisagens florestais
+
+[The New Climate Economy Report](https://mega.nz/file/o0NkwICJ#LvJmiY7qlku4tCgZLgnlOzp5P_OVcyzHqbHABgicknw){target="_blank" rel="noopener noreferrer"}
+
+-   Part II: Chapter Summaries - 2. Land use - 2.2 Forests as natural capital
+
+-   PART III: GLOBAL ACTION PLAN
+
+## Situações que demandam restauração
+
+[GUIA DE RESTAURAÇÃO ECOLÓGICA PARA GESTORES DE UNIDADES DE CONSERVAÇÃO](https://www.gov.br/icmbio/pt-br/centrais-de-conteudo/publicacoes/publicacoes-diversas/gestao-e-unidade-de-conservacao/GuiadeRestauracaoEcologica_digital1.pdf){target="_blank" rel="noopener noreferrer"}
+
+-   Ver a Tabela 1. Situações que demandam restauração e as respectivas ações a serem tomadas de acordo com a legislação vigente.
+
+## Legislação pertinente
+
+[Rohden & Albino Novo Codigo florestal](https://mega.nz/file/RxEXRABC#JCqdPiG5hetC4tD-CCP-dM0m7YMqPAamr7uoANa0I3s){target="_blank" rel="noopener noreferrer"}
+
+[Guia para aplicação da lei floresta em imóveis rurais](https://admin.imaflora.org/public/media/biblioteca/5565ece9c9034_53832b4636dac_guia_codigo_florestal_2a_edicao.pdf){target="_blank" rel="noopener noreferrer"}
+
+[Embrapa - Código Florestal](https://www.embrapa.br/codigo-florestal){target="_blank" rel="noopener noreferrer"}
+
+[O código florestal na Mata Atlântica](https://admin.imaflora.org/public/media/biblioteca/codigo_florestal_na_ma_final_1.pdf){target="_blank" rel="noopener noreferrer"}
+
+-   Ver Tabela 4. Déficit de Áreas de Preservação Permanente (APP) e Reserva Legal (RL)
+
+[Módulos Fiscais](https://www.embrapa.br/codigo-florestal/area-de-reserva-legal-arl/modulo-fiscal){target="_blank" rel="noopener noreferrer"}

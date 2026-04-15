@@ -1,0 +1,41 @@
+---
+title: "Regularização Ambiental"
+description: "Introdução a restauração florestal, métodos e legislação, aplicação, projeto. Material didático da PUCPR."
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Restauração ambiental]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+Acessar o seguinte texto:
+
+[A RESERVA LEGAL QUE QUEREMOS PARA A MATA ATLÂNTICA](http://www.pactomataatlantica.org.br/wp-content/uploads/2021/05/pacto_reserva_legal_2018-compactado.pdf){target="_blank" rel="noopener noreferrer"}
+
+Acessem as partes:
+
+-   ASPECTOS GERAIS DA RESERVA LEGAL
+
+-   Papéis ecológicos da Reserva Legal na Mata Atlântica
+
+-   Regularização de Reserva Legal
+
+[Código Florestal e regularização ambiental](https://www.embrapa.br/codigo-florestal/entenda-o-codigo-florestal/perguntas-e-respostas){target="_blank" rel="noopener noreferrer"}
+
+[CAR](https://www.car.gov.br){target="_blank" rel="noopener noreferrer"}
+
+<https://www.gov.br/pt-br/servicos/inscrever-imovel-rural-no-cadastro-ambiental-rural-car>
+
+<https://www.cratonconsultoria.com/post/10-vantagens-para-quem-possui-car>
+
+[CAR/PR](https://www.iat.pr.gov.br/Pagina/Cadastro-Ambiental-Rural-CAR){target="_blank" rel="noopener noreferrer"}
+
+[PRA](https://www.iat.pr.gov.br/Pagina/Programa-de-Regularizacao-Ambiental-PRA){target="_blank" rel="noopener noreferrer"}
+
+<https://www.gov.br/pt-br/servicos/elaborar-e-enviar-proposta-simplificada-de-regularizacao-ambiental-do-imovel-rural>
+
+[Módulos Fiscais](https://www.embrapa.br/codigo-florestal/area-de-reserva-legal-arl/modulo-fiscal){target="_blank" rel="noopener noreferrer"}

@@ -28,3 +28,17 @@ Essas características tornam o PAST uma alternativa poderosa e eficiente para a
 [PAST](https://www.nhm.uio.no/english/research/resources/past){target="_blank" rel="noopener noreferrer"}
 
 Podem Baixar a versão 4.17 que nem precisa instalar e já funciona 100% (mas tambem podem baixar a última versão, não tem muita diferença)
+
+### Índices de Diversidade
+
+No past, nos vamos calcular e comparar os índices de diversidade. Os principais são o de Shannon e de Simpson.
+
+[Índices de Diversidade](https://en.wikipedia.org/wiki/Diversity_index){target="_blank" rel="noopener noreferrer"}
+
+Podemos também estimar a riqueza real
+
+Como coletar todas as espécies de uma área é praticamente impossível, principalmente em regiões biodiversas, podemos utilizar análises estatísticas para tentar estimar a riqueza real, com base em uma amostra coletada em campo
+
+Um bom estimador é o Chao1
+
+[Chao 1](https://www.statology.org/how-to-calculate-and-interpret-chao1-species-richness-estimator/){target="_blank" rel="noopener noreferrer"}

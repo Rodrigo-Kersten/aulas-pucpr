@@ -1,0 +1,24 @@
+---
+title: "Identificação"
+format:
+  html:
+    sidebar: false
+---
+
+## Arquivos para download sobre Identificação Botânica, Restauração Ambiental e Inventários Realizados em FOM
+
+(atualizados com alguma frequência)
+
+![](lupa1.webp){fig-align="center" width="400"}
+
+### Trabalhos auxiliares para Identificação Botânica
+
+[![](mega.webp){width="50"}](https://mega.nz/folder/Ih0wQLQS#UYGIM5f5iwvlByAjX4Fn2g)
+
+### Textos sobre Restauração Ambiental
+
+[![](mega.webp){width="50"}](https://mega.nz/folder/1k1ARKgJ#GZ6alIOHOQqY9kjFpnJ0sw)
+
+### Arquivo do Google Earth com os estudos realizado em FOM por localidade
+
+[![](earth.webp){width="50"}](files/fom.kmz)

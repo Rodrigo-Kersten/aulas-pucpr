@@ -21,7 +21,7 @@ Para podermos analisar os dados é necessário primeiro que todas as plantas est
 
 Além de identificadas, tem que esta indicar também ***todas as parcelas (envelopes)*** em que a espécie foi registrada, como no exemplo
 
-![](critab.webp){fig-align="center" width="250"}
+![](tab4.webp){fig-align="center" width="250"}
 
 ### Montando a Planilha
 

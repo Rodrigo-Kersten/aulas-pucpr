@@ -16,15 +16,12 @@ Morfologia Vegetal é uma disciplina teórico-prática do 1º período dos Curso
 
 ![](morfo.webp){fig-align="center" width="400"}
 
+![](bar1.webp){fig-align="center" width="800"}
+
 ### Atividades - Trabalhos
 
 Ao longo do sementre vocês vão realizar dois trabalhos relacionados ao conteúdo trabalhado em sala. O primeiro corresponde a um ***Modelo de Célula*** vegetal e o outro sobre ***Dendrocronologia***
 
-
-![](bar1.webp){fig-align="center" width="800"}
-
-
 [**1 - Modelo de Célula Vegetal**](morfo1.qmd)
-
 
 [**2 - Dendrocronologia**](morfo2.qmd)

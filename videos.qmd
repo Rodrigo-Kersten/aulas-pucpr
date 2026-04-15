@@ -1,0 +1,21 @@
+---
+title: "Introdução"
+description: "Introdução a restauração florestal, métodos e legislação, aplicação, projeto. Material didático da PUCPR."
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Restauração ambiental]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+## Vídeos introdutórios à Ecologia da Restauração
+
+1 - [O Deseto da China](https://youtu.be/k8J1NuWj7mE){target="_blank" rel="noopener noreferrer"}
+
+2 - [O megaprojeto da floresta alimentar da África](https://youtu.be/xbBdIG--b58){target="_blank" rel="noopener noreferrer"}
+
+3 -[Plantando a chuva para obter abundância](https://youtu.be/I2xDZlpInik){target="_blank" rel="noopener noreferrer"}

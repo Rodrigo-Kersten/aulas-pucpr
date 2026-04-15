@@ -38,8 +38,8 @@ website:
         text: "Restauração"
         icon: image-alt
         
-      - href: ident.qmd
-        text: "Identificação Botânica"
+      - href: download.qmd
+        text: "Downloads"
         icon: "archive"
 
       - href: marumbi.qmd
@@ -111,6 +111,26 @@ website:
               
             - text: "Amado"
               href: amado.qmd
+
+    - title: "Restauração"
+      contents:
+        - restaura.qmd
+        - section: "Atividades de Suporte"
+          contents:
+            - text: "Vídeos introdutórios"
+              href: videos.qmd
+              
+            - text: "Evolução dos Conceitos"
+              href: conceitos.qmd
+              
+            - text: "Código Florestal"
+              href: codigo.qmd
+              
+            - text: "Regularização Ambiental"
+              href: regulariza.qmd
+
+            - text: "Sensoriamento Remoto"
+              href: senso.qmd
 
         - "---"
         - text: "🔙 Voltar"

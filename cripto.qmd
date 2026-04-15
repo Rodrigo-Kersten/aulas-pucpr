@@ -18,11 +18,11 @@ format:
 
 ![](cripto.webp){fig-align="center" width="400"}
 
+![](bar1.webp){fig-align="center" width="800"}
+
 ### Atividades - Trabalhos
 
 Ao longo do sementre vocês vão realizar dois projetos de pesquisa nos moldes de atividades desenvolvidas profissionalmente por biólogos em campo. Uma sobre ***ecologia de briófitas*** que envolve a produção de um pequeno artigo cietífico (nota científica) e outro sobre ***inventário florístico*** de pteridófitas, que envolve a produção de uma coleção com os indivíduos indentificados até gênero.
-
-![](bar1.webp){fig-align="center" width="800"}
 
 [**1 - Nota Científica Sobre Ecologia de Briófias**](cripto2.qmd)
 

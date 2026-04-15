@@ -16,6 +16,11 @@ format:
 
 Na disciplina os estudantes aprendem a planejar e executar inventários e avaliações de biodiversidade para os principais grupos botânicos. Conhecem a biodiversidade dos grupos e os métodos de amostragem, análise, apresentação dos dados e entrega de relatórios oficiais. Os estudantes vivenciam atividades de campo com demonstrações práticas.
 
+![](parc.webp){fig-align="center" width="600"}
+
+![](bar2.webp){fig-align="center" width="600"}
+
+
 ### Inventário Florestal
 
 ***Inventário e avaliação da biodiversidade*** são processos essenciais para compreender, monitorar e proteger a diversidade de espécies e ecossistemas. O ***inventário*** envolve a identificação e caracterização de espécies em uma área, podendo focar em flora (como em inventários florestais) ou fauna (como levantamentos faunísticos). São fundamentais para o licenciamento ambiental, planejamento de manejo, conservação e educação ambiental A ***avaliação da biodiversidade*** vai além da identificação, envolvendo a análise da riqueza, equabilidade e distribuição das espécies, além da avaliação do estado de conservação e das interações ecológicas sendo fundamental nas pesquisas sobre ecologia e conservação da natureza.

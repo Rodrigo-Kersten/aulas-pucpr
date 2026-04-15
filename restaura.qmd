@@ -5,7 +5,11 @@ author: "Rodrigo Kersten"
 categories: [Botânica, Biodiversidade, Restauração ambiental]
 format:
   html:
-    sidebar: false
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
 ---
 
 ## Ecologia da Restauração

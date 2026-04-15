@@ -1,0 +1,35 @@
+---
+title: "Sensoriamento Remoto"
+description: "Introdução a restauração florestal, métodos e legislação, aplicação, projeto. Material didático da PUCPR."
+author: "Rodrigo Kersten"
+categories: [Botânica, Biodiversidade, Restauração ambiental]
+format:
+  html:
+    code-copy: true        
+    code-overflow: scroll   
+    code-block-bg: "#f6f8fa"  
+    code-block-border-left: "#24292f"  
+    highlight-style: github
+---
+
+## Sensoriamento Remoto
+
+Trazer um computador por equipe (AO MENOS)
+
+Instalar o Google Earth <https://www.google.com/intl/pt-BR/earth/versions/#earth-pro>
+
+**Baixar os seguintes arquivos**
+
+1.  Contorno do Paraná e de Ctba
+
+-   [PARANÁ](files\parana.kmz)
+
+-   [Curitiba](files\Curitiba.kmz)
+
+2.  [Recursos Hídrico do Brasil](files\hidricos.kmz)
+
+3.  Unidades de Conservação (Atualizados)
+
+-   [UCS Federais](https://www.gov.br/icmbio/pt-br/assuntos/dados_geoespaciais/mapa-tematico-e-dados-geoestatisticos-das-unidades-de-conservacao-federais){target="_blank" rel="noopener noreferrer"}
+
+-   [UCS Estaduais](https://www.iat.pr.gov.br/Pagina/Dados-sobre-Unidades-de-Conservacao){target="_blank" rel="noopener noreferrer"}

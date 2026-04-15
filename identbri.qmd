@@ -15,11 +15,13 @@ format:
 editor: visual
 ---
 
-## Procedimentos para identificação de Briófitas em Laboratório
+## Procedimentos em Laboratório
 
 Após a coleta dos dados em campo, a próxima etapa de um trabalho de botânica é a identificação das espécies coletadas. De nada adianta coletar se o nome atribuido não estiver correto. Tudo que se sabe sobre uma espécie está correlacionado com o NOME e não com a espécie em si. Qualquer informação válida tem que estar atribuida a um nome correto, caso contrário a conclusão não será informativa.
 
 **Para a Identificação das Briófitas vocês vão utilizar os seguintes arquivos**
+
+![](idbrio.webp){fig-align="center" width="400"}
 
 [Chaves Briofitas Epífitas](files\ChaveBriofitas.pdf){target="_blank" rel="noopener noreferrer"}
 
@@ -27,50 +29,60 @@ Após a coleta dos dados em campo, a próxima etapa de um trabalho de botânica 
 
 Ambos estarão disponíveis no Laboratório para consulta.
 
-![](idbrio.webp){fig-align="center" width="400"}
-
 ------------------------------------------------------------------------
 
-**Para a Identificação vocês farão o seguinte processo**
+**Passo-a-Passo para Identificação e tabulação das espécies**
 
 1)  Comecem pelo **envelope 1** e sigam a numeração, árvore por árvore (vai ficar mais fácil)
 
 2)  Abram o envelope 1 sob a lupa,
 
-    -   separem quantas espécies ocorrem,
+    -   separem quantas morfo-espécies ocorrem (morfo-espécie = espécie morfológica: "espécies" que possuem características distinguíveis, mesmo que a gente não saiba o nome delas)
 
     -   colem UMA na tabela de identificação (como fizeram na primeira aula)
 
-    -   indiquem no quadrinhos ao lado em que árvore (Δ) e que altura (Z) foi observada
+    -   indiquem no quadrinhos ao lado em que árvore (Δ) e que zona de altura (Z) foi observada
 
 Assim:
 
-![](tab1.webp){width="400"}
+![](tab1.webp){fig-align="center" width="300"}
 
-3)  Identifiquem cada espécie antes de colar a próxima
+3)  Identifiquem a famílas antes de colar a próxima espécie. Façam isso com todas as espécies encontradas
 
-4)  Façam isso para todas deste envelope antes de passar para o próximo
+4)  Passem para o próximo envelope apenas após completarem o primeiro, e assim por diante.
 
-5)  **ENVELOPE 2**: ao abrir o envelope 2
+5)  Para agilizar, separem em duplas, uma identifica os musgos e outra as hepáticas (que devem ser colatas em folha separada)
 
-    -    comece procurando as espécies que já foram identificadas anteriormente e estão coladas na folha
+6)  **ENVELOPE 2**: ao abrir o envelope 2
+
+    -   comece procurando as espécies que já foram identificadas anteriormente e estão coladas na folha
 
     -   Se encontraram alguma repetida apenas ANOTEM SUA OCORRÊNCIA (Δ e Z).
 
-6)  Cada espécie registrada devem ter anotado todos os estratos (Δ e Z) em que ocorre
+![](tab0.webp){fig-align="center" width="500"}
+
+Ao poucos, a tabela deve ficar como esta acima.
+
+6)  Para cada espécie registrada devem ter anotado todos os estratos (Δ e Z) em que ocorre
 
 Esta aqui a baixo, foi registradas nas Árvores 1 e 3 nos dois estratos de altura (Δ1 Z1 - Δ1 Z2- Δ3 Z1 - Δ3 Z2)
 
-![](tab2.webp){width="250"}
+![](tab2.webp){fig-align="center" width="300"}
 
 Enquanto esta foi registrada nas árvores 1 - zona baixa e 2 - zona alta. (Δ1 Z1 - Δ2 Z2)
 
-![](tab3.webp){width="146"}
+![](tab3.webp){fig-align="center" width="146"}
+
+**ATENÇÃO!!! ESSA MARCAÇÃO É A BASE DE TODA A ANÁLISE DE DADOS DO ARTIGO**
 
 7)  A tabela final dever ficar assim:
 
-![](tab4.webp){width="400"}
+![](tab4.webp){fig-align="center" width="400"}
 
 8)  Após terminar a identificação vocês vão passar estes dados para a tabela do Excel
 
-[Planilha para tabulação dos Dados](files\dados.xlsx){target="_blank" rel="noopener noreferrer"}
+    [Planilha para tabulação dos Dados](files\dados.xlsx){target="_blank" rel="noopener noreferrer"}
+
+9)  Atenção!!! Estas tabelas devem ser entregues junto com o artigo impresso. Cuidem delas!!!!
+
+![](entrega.webp){fig-align="center" width="500"}
